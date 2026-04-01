@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import melynLogo from "@/assets/melyn-logo.png";
-import pibLogo from "@/assets/pib-logo.png";
 
 const HeroSection = () => {
   return (
@@ -18,7 +17,7 @@ const HeroSection = () => {
           className="mb-6"
         >
           <span className="inline-block px-5 py-2 rounded-full text-sm font-semibold bg-primary/10 text-primary border border-primary/20">
-            RFP Response  -  Economic Development Strategic Plan
+            RFP Response - Economic Development Sustainability Plan
           </span>
         </motion.div>
 
@@ -30,7 +29,7 @@ const HeroSection = () => {
         >
           Economic Development
           <br />
-          <span className="text-gradient">Strategic Plan</span>
+          <span className="text-gradient">Sustainability Plan</span>
         </motion.h1>
 
         <motion.p
@@ -39,7 +38,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10"
         >
-          Prepared for <span className="text-foreground font-semibold">snpink'tn (Penticton) Indian Band</span>  -  A comprehensive, community-driven 5-year Economic Development Strategic Plan delivered through a co-leadership model with PIB's Economic Development Manager.
+          Prepared for <span className="text-foreground font-semibold">Neqotkuk (Tobique) First Nation</span> - A comprehensive, community-driven 5-Year Economic Development Sustainability Plan delivered through a co-leadership model with Neqotkuk's Economic Development team.
         </motion.p>
 
         <motion.div
@@ -49,9 +48,9 @@ const HeroSection = () => {
           className="flex flex-wrap justify-center gap-4 md:gap-6 mb-14"
         >
           {[
-            { label: "Strategy", value: "$46,500", sub: "4 Months · 4 Phases" },
-            { label: "Strategy Plus", value: "$106,000", sub: "4 + 8 Months (melyn Brain) · 5 Phases\nFunding up to 100% available for melyn Brain" },
-            { label: "Project Start", value: "March 30", sub: null },
+            { label: "Strategy", value: "$64,500", sub: "4 Months - 6 Phases" },
+            { label: "Strategy Plus", value: "$144,500", sub: "4 + 12 Months (melyn Brain)" },
+            { label: "Project Start", value: "Immediately", sub: "Upon award" },
           ].map((stat, i) => (
             <div key={i} className="card-elevated px-6 py-4 text-center min-w-[160px]">
               <div className="text-2xl md:text-3xl font-display font-bold text-gradient">{stat.value}</div>
@@ -84,10 +83,8 @@ const HeroSection = () => {
         className="absolute bottom-8 left-0 right-0 flex justify-center"
       >
         <div className="card-elevated px-6 py-2 text-sm text-muted-foreground rounded-full flex items-center gap-3">
-          <img src={pibLogo} alt="snpink'tn Indian Band" className="h-8" />
-          <span>×</span>
           <img src={melynLogo} alt="melyn" className="h-5" />
-          <span>—  March 2026</span>
+          <span>melyn - April 2026</span>
         </div>
       </motion.div>
     </section>

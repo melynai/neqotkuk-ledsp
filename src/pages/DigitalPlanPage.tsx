@@ -19,7 +19,7 @@ const phases = [
     timeline: "Living Document",
     deliverables: [
       "Most strategies get presented once and filed away",
-      "A digital platform makes the strategy a living document — updated quarterly, searchable, and built for action",
+      "A digital platform makes the strategy a living document - updated quarterly, searchable, and built for action",
     ],
   },
   {
@@ -40,7 +40,7 @@ const phases = [
     title: "Included in Both Options",
     timeline: "Strategy & Strategy Plus",
     deliverables: [
-      "The Digital Strategy Platform is included in both the Strategy ($46,500) and Strategy Plus ($106,000) options",
+      "The Digital Strategy Platform is included in both the Strategy ($64,500) and Strategy Plus ($144,500) options",
       "The Strategy Plus version includes deeper melyn Brain integration, AI-powered grant matching, and automated reporting",
     ],
   },
@@ -73,7 +73,7 @@ const DigitalPlanPage = () => (
             Digital Plan
           </span>
           <h1 className="font-display text-3xl md:text-5xl font-bold mb-3 text-foreground">Digital Strategy Platform</h1>
-          <p className="text-lg text-muted-foreground mb-6 max-w-2xl">Your strategy — alive, accessible, and always current</p>
+          <p className="text-lg text-muted-foreground mb-6 max-w-2xl">Your strategy - alive, accessible, and always current</p>
           <div className="card-elevated inline-block px-8 py-4 rounded-2xl">
             <div className="text-sm text-muted-foreground mb-1">Investment</div>
             <div className="text-4xl font-display font-bold text-gradient">Included</div>
@@ -95,7 +95,7 @@ const DigitalPlanPage = () => (
             <p className="text-sm font-semibold text-foreground mb-1">See an example of a completed strategy</p>
             <p className="text-xs text-muted-foreground">
               Password: <span className="font-mono font-semibold text-foreground">melynStrategy2026!</span>
-              <span className="ml-2 italic">— Uses dummy data to protect privacy</span>
+              <span className="ml-2 italic">- Uses dummy data to protect privacy</span>
             </p>
           </div>
           <a

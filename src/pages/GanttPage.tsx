@@ -25,7 +25,7 @@ interface GanttRow {
 }
 
 const rows: GanttRow[] = [
-  // Phase 1 — Month 1 (Wk 1-2)
+  // Phase 1 - Month 1 (Wk 1-2)
   { id: "P1",   label: "PHASE 1 - Project Initiation and Alignment",          start: 1,  end: 2,  phase: 1, isPhaseHeader: true },
   { id: "1.1",  label: "Project Kick-Off and Charter Confirmation",            start: 1,  end: 1,  phase: 1 },
   { id: "1.2",  label: "Engagement Plan Development",                          start: 1,  end: 2,  phase: 1 },
@@ -35,7 +35,7 @@ const rows: GanttRow[] = [
   { id: "1.6",  label: "BCR and Briefing Note - Phase 1",                      start: 2,  end: 2,  phase: 1 },
   { id: "M1",   label: "Milestone: Phase 1 Complete",                          start: 2,  end: 2,  phase: 1, isMilestone: true },
 
-  // Phase 2 — Months 1-2 (Wk 3-8)
+  // Phase 2 - Months 1-2 (Wk 3-8)
   { id: "P2",   label: "PHASE 2 - Engagement and Baseline Assessment",         start: 3,  end: 8,  phase: 2, isPhaseHeader: true },
   { id: "2.1",  label: "Engagement Design and Materials",                      start: 3,  end: 3,  phase: 2 },
   { id: "2.2",  label: "Community Engagement Sessions",                        start: 3,  end: 7,  phase: 2 },
@@ -46,7 +46,7 @@ const rows: GanttRow[] = [
   { id: "2.7",  label: "Pre-Planning Assessment Report",                       start: 7,  end: 8,  phase: 2 },
   { id: "M2",   label: "Milestone: Phase 2 Complete",                          start: 8,  end: 8,  phase: 2, isMilestone: true },
 
-  // Phase 3 — Months 3-4 (Wk 9-13)
+  // Phase 3 - Months 3-4 (Wk 9-13)
   { id: "P3",   label: "PHASE 3 - Strategic Planning",                         start: 9,  end: 13, phase: 3, isPhaseHeader: true },
   { id: "3.1",  label: "Synthesis of Phase 2 Findings",                        start: 9,  end: 9,  phase: 3 },
   { id: "3.2",  label: "Vision, Mission, and Guiding Principles",              start: 9,  end: 10, phase: 3 },
@@ -57,7 +57,7 @@ const rows: GanttRow[] = [
   { id: "3.7",  label: "Live Digital Strategy Platform Build",                 start: 12, end: 13, phase: 3 },
   { id: "M3",   label: "Milestone: Phase 3 Complete / Draft Plan",             start: 13, end: 13, phase: 3, isMilestone: true },
 
-  // Phase 4 — Month 4 (Wk 14-16)
+  // Phase 4 - Month 4 (Wk 14-16)
   { id: "P4",   label: "PHASE 4 - Finalization and Close-Out",                 start: 14, end: 16, phase: 4, isPhaseHeader: true },
   { id: "4.1",  label: "Incorporate Feedback and Finalize Plan",               start: 14, end: 14, phase: 4 },
   { id: "4.2",  label: "Final Presentation to Chief and Council",              start: 15, end: 15, phase: 4 },
@@ -68,14 +68,14 @@ const rows: GanttRow[] = [
   { id: "M4",   label: "Milestone: Project Complete",                          start: 16, end: 16, phase: 4, isMilestone: true },
 ];
 
-// 4 months, each = 4 weeks; week 1–16 maps to pct across months
+// 4 months, each = 4 weeks; week 1-16 maps to pct across months
 const monthLabels = ["Month 1", "Month 2", "Month 3", "Month 4"];
 
 // Bars use week-based positions internally, rendered as % of 16 weeks
 const barLeft  = (start: number) => `${((start - 1) / TOTAL_WEEKS) * 100}%`;
 const barWidth = (start: number, end: number) => `${((end - start + 1) / TOTAL_WEEKS) * 100}%`;
 
-// Brain implementation — 12 months (overall Months 5–16)
+// Brain implementation - 12 months (overall Months 5-16)
 const BRAIN_MONTHS = 12;
 const brainRows = [
   { id: "B1", label: "Platform Setup & Configuration",      start: 1,  end: 2  },
@@ -105,7 +105,7 @@ const GanttPage = () => {
               4-Month <span className="text-gradient">Gantt Chart</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Full task schedule from March 30, 2026 across all four phases. Detailed Excel schedule submitted separately per RFP requirements.
+              Full task schedule from immediately upon award across all four phases. Detailed Excel schedule submitted separately per RFP requirements.
             </p>
           </motion.div>
 
@@ -131,7 +131,7 @@ const GanttPage = () => {
             className="card-elevated overflow-x-auto"
           >
             <div className="min-w-[900px]">
-              {/* Month header — single row, no week sub-labels */}
+              {/* Month header - single row, no week sub-labels */}
               <div className="flex border-b-2 border-border bg-muted/60 sticky top-0 z-10">
                 <div className="w-64 shrink-0 px-4 py-3 text-xs font-bold text-muted-foreground uppercase tracking-wide">
                   Task
@@ -191,7 +191,7 @@ const GanttPage = () => {
 
                     {/* Bar column */}
                     <div className="flex-1 relative h-7 pr-4">
-                      {/* Grid lines — month boundaries only */}
+                      {/* Grid lines - month boundaries only */}
                       <div className="absolute inset-0 pointer-events-none">
                         {[25, 50, 75].map((pct) => (
                           <div
@@ -235,10 +235,10 @@ const GanttPage = () => {
           >
             {(
               [
-                { phase: 1 as PhaseKey, label: "Phase 1", weeks: "Month 1",    cost: "$5,000",  tasks: 6 },
-                { phase: 2 as PhaseKey, label: "Phase 2", weeks: "Months 1-2", cost: "$16,000", tasks: 7 },
-                { phase: 3 as PhaseKey, label: "Phase 3", weeks: "Months 3-4", cost: "$15,000", tasks: 7 },
-                { phase: 4 as PhaseKey, label: "Phase 4", weeks: "Month 4",    cost: "$6,500",  tasks: 6 },
+                { phase: 1 as PhaseKey, label: "Phase 1", weeks: "Month 1",    cost: "$4,500",  tasks: 6 },
+                { phase: 2 as PhaseKey, label: "Phase 2", weeks: "Months 1-2", cost: "$12,000", tasks: 7 },
+                { phase: 3 as PhaseKey, label: "Phase 3", weeks: "Months 3-4", cost: "$19,500", tasks: 7 },
+                { phase: 4 as PhaseKey, label: "Phase 4", weeks: "Month 4",    cost: "$10,500",  tasks: 6 },
               ]
             ).map(({ phase, label, weeks, cost, tasks }) => (
               <div key={phase} className="card-elevated p-4">
@@ -253,10 +253,10 @@ const GanttPage = () => {
 
           {/* Note */}
           <p className="text-center text-xs text-muted-foreground mt-6 italic">
-            Full task-based project schedule with hours, milestones, review gates, and engagement sessions submitted as Excel in the Technical Proposal envelope per RFP Section 8.4.
+            Full task-based project schedule with hours, milestones, review gates, and engagement sessions submitted as Excel in the Technical Proposal envelope per RFP requirements.
           </p>
 
-          {/* ── melyn Brain Implementation ── */}
+          {/* melyn Brain Implementation */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -266,7 +266,7 @@ const GanttPage = () => {
             <div className="flex items-center justify-center gap-3 mb-6">
               <h2 className="font-display text-2xl md:text-3xl font-bold text-center">
                 melyn Brain Implementation{" "}
-                <span className="text-muted-foreground font-normal text-lg">— Months 5-16</span>
+                <span className="text-muted-foreground font-normal text-lg"> - Months 5-16</span>
               </h2>
               <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-700 border border-amber-200">
                 Strategy Plus
@@ -275,7 +275,7 @@ const GanttPage = () => {
 
             <div className="card-elevated overflow-x-auto border-2 border-amber-200/40">
               <div className="min-w-[900px]">
-                {/* Month header — Month 5 through Month 16 */}
+                {/* Month header - Month 5 through Month 16 */}
                 <div className="flex border-b-2 border-amber-200 bg-amber-50/60">
                   <div className="w-64 shrink-0 px-4 py-3 text-xs font-bold text-amber-700 uppercase tracking-wide">
                     Implementation Task
@@ -309,7 +309,7 @@ const GanttPage = () => {
                       </div>
                     </div>
                     <div className="flex-1 relative h-7 pr-4">
-                      {/* Grid lines — quarterly (every 3 months) */}
+                      {/* Grid lines - quarterly (every 3 months) */}
                       <div className="absolute inset-0 pointer-events-none">
                         {[25, 50, 75].map((pct) => (
                           <div

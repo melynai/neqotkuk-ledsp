@@ -26,7 +26,7 @@ const projectTeam = [
     title: "Team Lead, Empower Services",
     badge: "Lead Analyst",
     badgeColor: "bg-[hsl(var(--sky)/0.1)] text-[hsl(var(--sky))] border-[hsl(var(--sky)/0.2)]",
-    bio: "M.Sc. Data Science and Analytics + B.Comm. Business Technology Management, University of Calgary. Day-to-day project lead alongside PIB's EDM - research, engagement coordination, and all deliverables.",
+    bio: "M.Sc. Data Science and Analytics + B.Comm. Business Technology Management, University of Calgary. Day-to-day project lead alongside Neqotkuk's Economic Development team - research, engagement coordination, and all deliverables.",
     tags: ["Research", "Engagement Coordination", "Deliverables"],
   },
   {
@@ -40,17 +40,17 @@ const projectTeam = [
   {
     name: "Dr. Stan Chung",
     title: "Community Advisor, melyn",
-    badge: "BC Cultural Advisor",
+    badge: "Governance Advisor",
     badgeColor: "bg-[hsl(var(--coral)/0.1)] text-[hsl(var(--coral))] border-[hsl(var(--coral)/0.2)]",
-    bio: "Ph.D. Performance Studies (UBC), M.A. English (University of Toronto). BC-specific cultural context and Syilx/Okanagan alignment for all deliverables and engagement activities.",
-    tags: ["BC Context", "Syilx Alignment", "Cultural Review"],
+    bio: "Ph.D. Performance Studies (UBC), M.A. English (University of Toronto). Governance and cultural context advisory for all deliverables and engagement activities.",
+    tags: ["Governance", "Cultural Context", "Advisory"],
   },
   {
     name: "Deepak Balakrishnan",
     title: "Market Research and Competitive Analysis Specialist",
     badge: "Research",
     badgeColor: "bg-[hsl(var(--sky)/0.1)] text-[hsl(var(--sky))] border-[hsl(var(--sky)/0.2)]",
-    bio: "B.Eng. Electrical and Electronics Engineering. Background in technical analysis and systems thinking. Leads market research, opportunity scanning, and competitive analysis for the PIB engagement.",
+    bio: "B.Eng. Electrical and Electronics Engineering. Background in technical analysis and systems thinking. Leads market research, opportunity scanning, and competitive analysis for the Neqotkuk engagement.",
     tags: ["Market Research", "Competitive Analysis", "Opportunity Scanning"],
   },
   {
@@ -86,20 +86,15 @@ const melyTeamGroups = [
     members: [
       {
         name: "Ramona Horseman",
-        specialty: "Community Advisor. Former Chief of Horselake First Nation. Indigenous Engagement Advisor for the PIB project - Elders engagement, cultural safety, and community governance.",
+        specialty: "Community Advisor. Former Chief of Horselake First Nation. Indigenous Engagement Advisor for the Neqotkuk project - Elders engagement, cultural safety, and community governance.",
         tags: ["Indigenous Engagement", "Elders Engagement", "Governance"],
         highlight: true,
       },
       {
         name: "Dr. Stan Chung",
-        specialty: "Community Advisor. Ph.D. Performance Studies, UBC. BC Cultural Advisor for the PIB project - Syilx/Okanagan cultural alignment and community engagement design.",
-        tags: ["BC Context", "Syilx Alignment", "Cultural Review"],
+        specialty: "Community Advisor. Ph.D. Performance Studies, UBC. Governance Advisor for the Neqotkuk project - governance and cultural alignment for engagement design and deliverables.",
+        tags: ["Governance", "Cultural Context", "Advisory"],
         highlight: true,
-      },
-      {
-        name: "Tiffany Perley",
-        specialty: "Economic Development Officer, 32+ years experience. Held Executive Director, Program Coordinator, and HR Management roles. Expert in grant writing, funding research, and program development.",
-        tags: ["Economic Development", "Grant Writing", "Program Development"],
       },
       {
         name: "Kelly Kask",
@@ -113,7 +108,7 @@ const melyTeamGroups = [
     members: [
       {
         name: "Mackenzie Kreutzer",
-        specialty: "Team Lead, Empower Services. M.Sc. Data Science and Analytics + B.Comm. Business Technology Management, University of Calgary. Lead Analyst on the PIB project - research, engagement, and all deliverables.",
+        specialty: "Team Lead, Empower Services. M.Sc. Data Science and Analytics + B.Comm. Business Technology Management, University of Calgary. Lead Analyst on the Neqotkuk project - research, engagement, and all deliverables.",
         tags: ["Lead Analyst", "Research", "Deliverables"],
         highlight: true,
       },
@@ -219,11 +214,11 @@ const TeamPage = () => {
               The <span className="text-gradient">Team</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              The PIB project team, backed by the full depth of melyn's multidisciplinary roster.
+              The Neqotkuk project team, backed by the full depth of melyn's multidisciplinary roster.
             </p>
           </motion.div>
 
-          {/* PIB Project Team */}
+          {/* Neqotkuk Project Team */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -232,7 +227,7 @@ const TeamPage = () => {
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="h-px flex-1 bg-border" />
-              <span className="text-xs font-bold uppercase tracking-widest text-primary px-3">PIB Project Team</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary px-3">Neqotkuk Project Team</span>
               <div className="h-px flex-1 bg-border" />
             </div>
           </motion.div>

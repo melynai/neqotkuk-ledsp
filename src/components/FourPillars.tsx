@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Map, Heart, BookOpen, Building2 } from "lucide-react";
 
 const pillars = [
-  { icon: Map, name: "Land", desc: "Territory, environment, resources, housing, infrastructure", color: "bg-gradient-brain" },
-  { icon: BookOpen, name: "Language", desc: "Revitalization, education, knowledge transfer", color: "bg-gradient-ccp" },
-  { icon: Heart, name: "Culture", desc: "Traditions, ceremonies, heritage preservation", color: "bg-gradient-website" },
-  { icon: Building2, name: "Governance", desc: "Self-determination, transparency, leadership", color: "bg-[hsl(var(--sky-light))]" },
+  { icon: Map, name: "Sustainable Growth", desc: "Economic diversification, revenue development, long-term sustainability", color: "bg-gradient-brain" },
+  { icon: BookOpen, name: "Capacity Building", desc: "Training, skills development, leadership readiness, succession planning", color: "bg-gradient-ccp" },
+  { icon: Heart, name: "Community Voice", desc: "Engagement, transparency, community-driven priorities", color: "bg-gradient-website" },
+  { icon: Building2, name: "Strategic Partnerships", desc: "Regional collaboration, investor readiness, intergovernmental relations", color: "bg-[hsl(var(--sky-light))]" },
 ];
 
 const FourPillars = () => {
@@ -19,10 +19,10 @@ const FourPillars = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Grounded in <span className="text-gradient">Four Cultural Pillars</span>
+            Grounded in <span className="text-gradient">Four Strategic Pillars</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            The CCP framework places community identity at the centre, weaving these pillars through every planning decision.
+            The economic development framework places community priorities at the centre, weaving these pillars through every planning decision.
           </p>
         </motion.div>
 

@@ -4,26 +4,36 @@ const phases = [
   {
     period: "Month 1",
     label: "Phase 1: Project Initiation and Alignment",
-    tags: ["Charter", "Engagement Plan", "WBS", "EDAC Setup"],
+    tags: ["Charter", "Engagement Plan", "WBS"],
   },
   {
-    period: "Months 1-2",
-    label: "Phase 2: Community Engagement and Baseline Assessment",
+    period: "Months 1-3",
+    label: "Phase 2: Engagement and Baseline Assessment",
     tags: ["Engagement", "Baseline", "Assessment Report"],
   },
   {
-    period: "Months 2-4",
+    period: "Months 2-3",
     label: "Phase 3: Strategic Planning",
-    tags: ["Draft Plan", "Digital Platform", "KPIs"],
+    tags: ["Draft Plan", "KPIs", "Implementation Framework"],
   },
   {
-    period: "Month 4",
+    period: "Months 2-4",
     label: "Phase 4: Finalization and Close-Out",
     tags: ["Final Plan", "Video", "Comms", "Close-Out"],
   },
   {
+    period: "Months 3-4",
+    label: "Phase 5: Live Digital Strategy Platform",
+    tags: ["Interactive Dashboard", "Grant Pipeline", "Community View"],
+  },
+  {
+    period: "Months 1-4",
+    label: "Phase 6: PM and Administration",
+    tags: ["Coordination", "Reporting", "Quality Assurance"],
+  },
+  {
     period: "Months 5-16",
-    label: "Phase 5: melyn Brain Implementation",
+    label: "melyn Brain Implementation",
     tags: ["Platform Setup", "Data Migration", "Training", "12-Month License", "Dedicated Support"],
     highlight: true,
   },
@@ -42,7 +52,7 @@ const TimelineSection = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
             Delivery <span className="text-gradient">Timeline</span>
           </h2>
-          <p className="text-muted-foreground text-lg">4-month strategy + 12-month melyn Brain implementation  -  starting March 30, 2026.</p>
+          <p className="text-muted-foreground text-lg">6 phases across 4 months + 12-month melyn Brain implementation - starting immediately upon award.</p>
         </motion.div>
 
         <div className="relative">

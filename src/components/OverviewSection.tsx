@@ -1,78 +1,107 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ClipboardList, Users, BarChart3, CheckSquare, Leaf, Shield, ChevronDown, CheckCircle2 } from "lucide-react";
+import { ClipboardList, Users, BarChart3, CheckSquare, Leaf, Shield, ChevronDown, CheckCircle2, Monitor, Settings } from "lucide-react";
 
 const phases = [
   {
     icon: ClipboardList,
     title: "Phase 1 - Project Initiation and Alignment",
     weeks: "Month 1",
-    cost: "$5,000",
+    cost: "$4,500",
     gradient: "bg-gradient-brain",
-    desc: "Project Charter, Engagement Plan, Work Breakdown Structure, BCR and Briefing Note - the disciplined foundation.",
+    desc: "Project Charter, Engagement Plan, Work Breakdown Structure, and Briefing Note - the disciplined foundation.",
     tasks: [
-      { id: "1.1", label: "Project Kick-Off and Charter Confirmation", detail: "Joint session with PIB EDM. Confirm objectives, scope, roles, decision pathways, and co-leadership protocols." },
+      { id: "1.1", label: "Project Kick-Off and Charter Confirmation", detail: "Joint session with Neqotkuk Economic Development team. Confirm objectives, scope, roles, decision pathways, and co-leadership protocols." },
       { id: "1.2", label: "Engagement Plan Development", detail: "Identify who will be engaged, how, and when - Members, Elders, Youth, businesses, departments, and partners. Confirm formats and cultural safety protocols." },
       { id: "1.3", label: "Work Breakdown Structure and Project Schedule", detail: "Full task-based project schedule in Excel: all tasks, milestones, engagement activities, deliverables, and review periods across all four phases." },
       { id: "1.4", label: "Risk and Information Gap Log", detail: "Identify early risks, information gaps, and constraints that may affect sequencing or implementation." },
       { id: "1.5", label: "Tools and Document Management Setup", detail: "Confirm shared document tools, feedback mechanisms, approval pathways, and version control." },
-      { id: "1.6", label: "BCR and Briefing Note Preparation", detail: "Band Council Briefing Note and BCR prepared and submitted for Phase 1 Council approval." },
-      { id: "1.7", label: "Economic Development Advisory Committee (EDAC) — Setup and Terms of Reference", detail: "Draft EDAC Terms of Reference and BCR language. EDAC requires: BCR from Chief and Council, ToR covering mandate/membership (5-7 members)/quorum/conflict-of-interest policy, and quarterly reporting to C&C. Without EDAC, PIB cannot access ISC Economic Development programming. melyn delivers BCR + ToR in Month 1.", priority: "high" as const },
+      { id: "1.6", label: "Briefing Note Preparation", detail: "Briefing Note prepared and submitted for Phase 1 Council approval." },
     ],
-    deliverables: ["Project Charter", "Engagement Plan", "Work Breakdown Structure", "PowerPoint", "BCR", "Briefing Note", "EDAC Setup Guidance"],
+    deliverables: ["Project Charter", "Engagement Plan", "Work Breakdown Structure", "PowerPoint", "Briefing Note"],
   },
   {
     icon: Users,
     title: "Phase 2 - Engagement and Baseline Assessment",
     weeks: "Months 1-2",
-    cost: "$16,000",
+    cost: "$12,000",
     gradient: "bg-gradient-website",
     desc: "Community engagement, stakeholder interviews, socio-economic baseline, and Pre-Planning Assessment Report.",
     tasks: [
-      { id: "2.1", label: "Engagement Design and Materials", detail: "Finalize engagement formats with PIB EDM: surveys, interviews, focus groups, and workshops. Prepare all materials in plain language." },
-      { id: "2.2", label: "Community Engagement Sessions", detail: "Facilitate engagement with PIB Members including Elders, Youth, and off-reserve members. All sessions facilitated with Syilx cultural protocols." },
-      { id: "2.3", label: "Stakeholder Interviews", detail: "Structured interviews with PIB leadership, department managers, and key external partners including ONA and City of Penticton." },
+      { id: "2.1", label: "Engagement Design and Materials", detail: "Finalize engagement formats with Neqotkuk Economic Development team: surveys, interviews, focus groups, and workshops. Prepare all materials in plain language." },
+      { id: "2.2", label: "Community Engagement Sessions", detail: "Facilitate engagement with Neqotkuk Members including Elders, Youth, and off-reserve members. All sessions facilitated with Wolastoqey cultural protocols." },
+      { id: "2.3", label: "Stakeholder Interviews", detail: "Structured interviews with Neqotkuk leadership, department managers, and key external partners including Tobique First Nation administration, regional partners, and provincial agencies." },
       { id: "2.4", label: "Stakeholder Register", detail: "Maintain complete register of all internal and external stakeholders, their interests, influence, and engagement approach." },
-      { id: "2.5", label: "Socio-Economic Baseline Analysis", detail: "Assess employment, labour force, education, housing, and demographic trends relevant to PIB economic development planning." },
-      { id: "2.6", label: "Economic Context and Opportunity Scan", detail: "External scan of tourism, gas station, IR No.2 development, solar, wind, agri-business, and IBA opportunities in the Okanagan region." },
-      { id: "2.7", label: "Pre-Planning Assessment Report", detail: "Synthesis of all engagement and technical analysis. Draft submitted for PIB review before Phase 3 advance." },
+      { id: "2.5", label: "Socio-Economic Baseline Analysis", detail: "Assess employment, labour force, education, housing, and demographic trends relevant to Neqotkuk economic development planning." },
+      { id: "2.6", label: "Economic Context and Opportunity Scan", detail: "External scan of tourism, forestry, agriculture, cannabis, real estate, and renewable energy opportunities in the Saint John River Valley region." },
+      { id: "2.7", label: "Pre-Planning Assessment Report", detail: "Synthesis of all engagement and technical analysis. Draft submitted for Neqotkuk review before Phase 3 advance." },
     ],
-    deliverables: ["Stakeholder Register", "Engagement Summaries", "Pre-Planning Assessment Report", "PowerPoint", "BCR", "Briefing Note"],
+    deliverables: ["Stakeholder Register", "Engagement Summaries", "Pre-Planning Assessment Report", "PowerPoint", "Briefing Note"],
   },
   {
     icon: BarChart3,
     title: "Phase 3 - Strategic Planning",
     weeks: "Months 2-4",
-    cost: "$15,000",
+    cost: "$19,500",
     gradient: "bg-gradient-hr",
     desc: "Draft 5-Year Economic Development Strategic Plan - vision, priorities, sectors, implementation framework, KPIs, and live digital platform.",
     tasks: [
       { id: "3.1", label: "Synthesis of Phase 2 Findings", detail: "Integrate engagement and analysis into a coherent strategic narrative identifying key themes, tensions, and priorities." },
-      { id: "3.2", label: "Vision, Mission, and Guiding Principles", detail: "Articulate PIB's long-term economic vision and mission grounded in Syilx values, collective benefit, and intergenerational thinking." },
-      { id: "3.3", label: "Strategic Priorities and Opportunity Areas", detail: "Define 5-year strategic priorities across tourism, gas station, IR No.2 development, renewables, agri-business, IBA management, and workforce development." },
+      { id: "3.2", label: "Vision, Mission, and Guiding Principles", detail: "Articulate Neqotkuk's long-term economic vision and mission grounded in Wolastoqey values, collective benefit, and intergenerational thinking." },
+      { id: "3.3", label: "Strategic Priorities and Opportunity Areas", detail: "Define 5-year strategic priorities across tourism, forestry, agriculture, cannabis, real estate, renewable energy, and workforce development." },
       { id: "3.4", label: "Implementation Framework", detail: "Governance, oversight, partnership considerations, funding pathways, risk management, and resourcing implications." },
       { id: "3.5", label: "KPIs and Performance Measurement", detail: "Practical KPIs and monitoring tools for each strategic priority, aligned to Chief and Council reporting." },
-      { id: "3.6", label: "Draft 5-Year Economic Development Strategic Plan", detail: "Substantially complete draft submitted to PIB EDM for leadership review and Council direction." },
-      { id: "3.7", label: "Live Digital Strategy Platform", detail: "Build and configure PIB's interactive digital platform: phase roadmap, grant pipeline matrix, Gantt chart, and community dashboard." },
+      { id: "3.6", label: "Draft 5-Year Economic Development Strategic Plan", detail: "Substantially complete draft submitted to Neqotkuk leadership for review and Council direction." },
+      { id: "3.7", label: "Live Digital Strategy Platform", detail: "Build and configure Neqotkuk's interactive digital platform: phase roadmap, grant pipeline matrix, Gantt chart, and community dashboard." },
     ],
-    deliverables: ["Draft 5-Year Strategic Plan", "Live Digital Platform", "PowerPoint", "BCR", "Briefing Note"],
+    deliverables: ["Draft 5-Year Strategic Plan", "Live Digital Platform", "PowerPoint", "Briefing Note"],
   },
   {
     icon: CheckSquare,
     title: "Phase 4 - Finalization and Close-Out",
     weeks: "Month 4",
-    cost: "$6,500",
+    cost: "$10,500",
     gradient: "bg-gradient-phase4",
     desc: "Final Plan, community communications package, short-form summary video, Lessons Learned Register, and project close-out.",
     tasks: [
-      { id: "4.1", label: "Incorporate Feedback and Finalize Plan", detail: "Review all feedback from PIB leadership and Chief and Council. Incorporate approved revisions into the final document." },
-      { id: "4.2", label: "Final Presentation to Chief and Council", detail: "Prepare and deliver final presentation of the Economic Development Strategic Plan to PIB Chief and Council." },
+      { id: "4.1", label: "Incorporate Feedback and Finalize Plan", detail: "Review all feedback from Neqotkuk leadership and Chief and Council. Incorporate approved revisions into the final document." },
+      { id: "4.2", label: "Final Presentation to Chief and Council", detail: "Prepare and deliver final presentation of the Economic Development Strategic Plan to Neqotkuk Chief and Council." },
       { id: "4.3", label: "Community Communications Package", detail: "Plain-language summary, digital graphics, presentation-ready visuals, and social-ready content on key priorities and strategic actions." },
       { id: "4.4", label: "Short-Form Summary Video", detail: "Community-facing video translating the final Economic Development Strategic Plan into an accessible format for digital distribution." },
-      { id: "4.5", label: "Lessons Learned Register", detail: "Document observations, challenges, successes, and recommendations to support PIB's continuous improvement." },
-      { id: "4.6", label: "Project Close-Out Package", detail: "All project materials transferred to PIB in fully editable digital formats. BCR for Chief and Council endorsement of the Final Plan." },
+      { id: "4.5", label: "Lessons Learned Register", detail: "Document observations, challenges, successes, and recommendations to support Neqotkuk's continuous improvement." },
+      { id: "4.6", label: "Project Close-Out Package", detail: "All project materials transferred to Neqotkuk in fully editable digital formats. Package prepared for Chief and Council endorsement of the Final Plan." },
     ],
-    deliverables: ["Final Economic Development Strategic Plan", "PowerPoint", "Community Comms Package", "Summary Video", "Lessons Learned Register", "Close-Out Package", "BCR Endorsement"],
+    deliverables: ["Final Economic Development Strategic Plan", "PowerPoint", "Community Comms Package", "Summary Video", "Lessons Learned Register", "Close-Out Package"],
+  },
+  {
+    icon: Monitor,
+    title: "Phase 5 - Live Digital Strategy Platform",
+    weeks: "Months 3-4",
+    cost: "$12,000",
+    gradient: "bg-gradient-brain",
+    desc: "Interactive digital platform hosting the Economic Development Strategy - phase tracker, grant pipeline matrix, Gantt chart, and community dashboard.",
+    tasks: [
+      { id: "5.1", label: "Platform Architecture and Design", detail: "Design the interactive digital platform structure, navigation, and data architecture aligned to the Economic Development Strategic Plan." },
+      { id: "5.2", label: "Strategy Dashboard Build", detail: "Build the interactive strategy dashboard with phase roadmap, initiative tracking, and progress indicators accessible to Chief, Council, and staff." },
+      { id: "5.3", label: "Grant Pipeline Matrix", detail: "Develop embedded grant calendar and funding tracker mapping federal, provincial, and regional funding opportunities to strategic priorities." },
+      { id: "5.4", label: "Community-Accessible View", detail: "Create a community-facing summary view of the strategy in plain language, optimized for mobile access and digital distribution." },
+      { id: "5.5", label: "Platform Launch and Training", detail: "Launch the platform, provide training to Neqotkuk's Economic Development team, and confirm quarterly update cadence." },
+    ],
+    deliverables: ["Live Digital Strategy Platform", "Grant Pipeline Matrix", "Community Dashboard", "Training Session"],
+  },
+  {
+    icon: Settings,
+    title: "Phase 6 - PM and Administration",
+    weeks: "Months 1-4",
+    cost: "$6,000",
+    gradient: "bg-gradient-phase4",
+    desc: "Project management, quality assurance, reporting, and coordination across all phases.",
+    tasks: [
+      { id: "6.1", label: "Project Management and Coordination", detail: "Ongoing project management including scheduling, status reporting, risk tracking, and coordination across all workstreams and team members." },
+      { id: "6.2", label: "Quality Assurance and Document Control", detail: "Version control, document review, formatting standards, and quality assurance across all deliverables and engagement materials." },
+      { id: "6.3", label: "Reporting and Administration", detail: "Progress reporting, invoicing, milestone tracking, and administrative coordination with Neqotkuk's Economic Development team." },
+    ],
+    deliverables: ["Status Reports", "Meeting Minutes", "Project Tracking"],
   },
 ];
 
@@ -89,10 +118,10 @@ const OverviewSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Four Phases of <span className="text-gradient">Strategic Excellence</span>
+            Six Phases of <span className="text-gradient">Strategic Excellence</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            A co-leadership model that partners with PIB's EDM - combining community voice, technical rigour, and a living digital strategy platform.
+            A co-leadership model that partners with Neqotkuk's Economic Development team - combining community voice, technical rigour, and a living digital strategy platform.
           </p>
         </motion.div>
 
@@ -141,14 +170,12 @@ const OverviewSection = () => {
                       <div className="px-6 pb-6 border-t border-border/60">
                         <div className="pt-5 grid md:grid-cols-2 gap-3 mb-5">
                           {phase.tasks.map((task, ti) => {
-                            const isHighPriority = (task as any).priority === "high";
                             return (
-                              <div key={ti} className={`flex gap-3 p-3 rounded-xl transition-colors ${isHighPriority ? "bg-amber-50/80 border border-amber-300/60 hover:bg-amber-50" : "bg-muted/40 hover:bg-muted/60"}`}>
-                                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded h-fit mt-0.5 shrink-0 ${isHighPriority ? "text-amber-700 bg-amber-100" : "text-primary bg-primary/10"}`}>{task.id}</span>
+                              <div key={ti} className="flex gap-3 p-3 rounded-xl transition-colors bg-muted/40 hover:bg-muted/60">
+                                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded h-fit mt-0.5 shrink-0 text-primary bg-primary/10">{task.id}</span>
                                 <div>
                                   <div className="flex items-center gap-2 flex-wrap mb-0.5">
                                     <p className="text-sm font-semibold text-foreground">{task.label}</p>
-                                    {isHighPriority && <span className="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-amber-200 text-amber-800">Phase 1 Priority</span>}
                                   </div>
                                   <p className="text-xs text-muted-foreground leading-relaxed">{task.detail}</p>
                                 </div>
@@ -160,9 +187,8 @@ const OverviewSection = () => {
                         <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-border/40">
                           <span className="text-xs font-bold text-muted-foreground uppercase tracking-wide mr-1">Deliverables:</span>
                           {phase.deliverables.map((d, di) => {
-                            const isEdac = d.includes("EDAC");
                             return (
-                              <span key={di} className={`flex items-center gap-1 text-xs px-2 py-0.5 rounded-full border font-medium ${isEdac ? "bg-amber-100 text-amber-800 border-amber-300" : "bg-primary/8 text-primary border-primary/15"}`}>
+                              <span key={di} className="flex items-center gap-1 text-xs px-2 py-0.5 rounded-full border font-medium bg-primary/8 text-primary border-primary/15">
                                 <CheckCircle2 className="w-3 h-3" />
                                 {d}
                               </span>
@@ -184,7 +210,7 @@ const OverviewSection = () => {
           className="card-elevated rounded-2xl p-6 flex flex-wrap justify-center gap-8 mb-8"
         >
           {[
-            { icon: Leaf, label: "Syilx Values-Grounded" },
+            { icon: Leaf, label: "Wolastoqey Values-Grounded" },
             { icon: Shield, label: "Co-Leadership Model" },
             { icon: BarChart3, label: "Living Digital Deliverable" },
           ].map((b, i) => (
@@ -204,7 +230,7 @@ const OverviewSection = () => {
         >
           <h3 className="font-display text-lg font-bold mb-2 text-foreground">The melyn Difference - A Living Strategy, Not a PDF</h3>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Every other firm will hand PIB a PDF. melyn delivers a live interactive digital platform as your Economic Development Strategy - phase tracker, grant pipeline matrix, Gantt chart, and community dashboard. Built on the same framework delivered for AOPFN LP in February 2026.
+            Every other firm will hand Neqotkuk a PDF. melyn delivers a live interactive digital platform as your Economic Development Strategy - phase tracker, grant pipeline matrix, Gantt chart, and community dashboard. Built on the same framework delivered for AOPFN LP in February 2026.
           </p>
         </motion.div>
       </div>

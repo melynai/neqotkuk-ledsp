@@ -32,6 +32,20 @@ const references = [
       "Full economic development strategy covering 936 MW+ renewable energy portfolio, land assets, six priority sectors. Delivered with live digital platform. Completed February 2026.",
     gradient: "bg-gradient-website",
   },
+  {
+    client: "snpink'tn (Penticton) Indian Band",
+    project: "LEDSP Economic Development Strategic Plan",
+    period: "March 2026 - Present",
+    region: "British Columbia",
+    team: ["TJ Galiardi", "Mackenzie Kreutzer", "Cherag Kapoor"],
+    contactName: "Contact upon request",
+    contactTitle: "",
+    contactEmail: "",
+    contactPhone: "",
+    description:
+      "5-Year Economic Development Strategic Plan for snpink'tn (Penticton) Indian Band, including community engagement, socio-economic baseline analysis, strategic planning, and live digital strategy platform delivery.",
+    gradient: "bg-gradient-hr",
+  },
 ];
 
 const ReferencePage = () => {
@@ -53,7 +67,7 @@ const ReferencePage = () => {
               Proven <span className="text-gradient">Delivery</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Two recent LEDSP-funded economic development engagements - same team, same methodology, same commitment to community outcomes.
+              Three recent LEDSP-funded economic development engagements - same team, same methodology, same commitment to community outcomes.
             </p>
           </motion.div>
 
@@ -98,17 +112,21 @@ const ReferencePage = () => {
                       <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                         <div>
                           <p className="font-semibold text-foreground">{ref.contactName}</p>
-                          <p className="text-sm text-muted-foreground">{ref.contactTitle}</p>
+                          {ref.contactTitle && <p className="text-sm text-muted-foreground">{ref.contactTitle}</p>}
                         </div>
                         <div className="flex flex-wrap gap-4 sm:ml-auto">
-                          <a href={`mailto:${ref.contactEmail}`} className="flex items-center gap-1.5 text-sm text-primary hover:underline">
-                            <Mail className="w-3.5 h-3.5" />
-                            {ref.contactEmail}
-                          </a>
-                          <a href={`tel:${ref.contactPhone.replace(/-/g, "")}`} className="flex items-center gap-1.5 text-sm text-primary hover:underline">
-                            <Phone className="w-3.5 h-3.5" />
-                            {ref.contactPhone}
-                          </a>
+                          {ref.contactEmail && (
+                            <a href={`mailto:${ref.contactEmail}`} className="flex items-center gap-1.5 text-sm text-primary hover:underline">
+                              <Mail className="w-3.5 h-3.5" />
+                              {ref.contactEmail}
+                            </a>
+                          )}
+                          {ref.contactPhone && (
+                            <a href={`tel:${ref.contactPhone.replace(/-/g, "")}`} className="flex items-center gap-1.5 text-sm text-primary hover:underline">
+                              <Phone className="w-3.5 h-3.5" />
+                              {ref.contactPhone}
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>

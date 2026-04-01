@@ -52,7 +52,7 @@ const team: TeamMember[] = [
       {
         title: "Co-Founder & CEO",
         org: "melyn",
-        period: "Aug 2025 — Present",
+        period: "Aug 2025 - Present",
         bullets: [
           "Co-founded and leads melyn, Canada's first platform built specifically for First Nations governance and funding",
           "Personally leads all economic development strategy engagements, having delivered LEDSP-funded strategies for multiple First Nations across Canada",
@@ -63,7 +63,7 @@ const team: TeamMember[] = [
       {
         title: "President",
         org: "Steel River Group",
-        period: "Oct 2023 — Aug 2025",
+        period: "Oct 2023 - Aug 2025",
         bullets: [
           "Led Indigenous relations, business development, and consulting services for a national Indigenous-focused firm",
           "Secured key partnerships and directed multi-year growth strategy",
@@ -72,7 +72,7 @@ const team: TeamMember[] = [
       {
         title: "Chief Development Officer",
         org: "Steel River Group",
-        period: "Jan 2023 — Oct 2023",
+        period: "Jan 2023 - Oct 2023",
         bullets: [
           "Spearheaded initiatives to foster Indigenous relations and community development",
           "Directed business development strategies across consulting and development sectors",
@@ -81,7 +81,7 @@ const team: TeamMember[] = [
       {
         title: "EVP, Corporate Development",
         org: "Steel River Group",
-        period: "Jun 2022 — Jan 2023",
+        period: "Jun 2022 - Jan 2023",
         bullets: [
           "Executive leadership across corporate development and partnership expansion",
         ],
@@ -89,13 +89,13 @@ const team: TeamMember[] = [
       {
         title: "Venture Partner",
         org: "Redstick Ventures",
-        period: "May 2024 — Present",
+        period: "May 2024 - Present",
         bullets: ["Venture partner focused on growth-stage companies"],
       },
       {
         title: "Co-Founder",
         org: "Outcast Foods",
-        period: "Nov 2017 — Feb 2022",
+        period: "Nov 2017 - Feb 2022",
         bullets: [
           "Co-founded sustainable food company; achieved 1500% growth in first 3 years",
           "Oversaw government relations and grant sourcing, securing $5M through federal programs",
@@ -105,7 +105,7 @@ const team: TeamMember[] = [
       {
         title: "Professional Hockey Player",
         org: "NHL Alumni",
-        period: "May 2008 — Oct 2017",
+        period: "May 2008 - Oct 2017",
         bullets: [
           "Colorado Avalanche, San Jose Sharks, Calgary Flames, Winnipeg Jets",
           "9.5 years professional career in the National Hockey League",
@@ -113,12 +113,13 @@ const team: TeamMember[] = [
       },
     ],
     education: [
-      "Dartmouth College, Class of 2010 (Ivy League Rookie of the Year — Ice Hockey)",
+      "Dartmouth College, Class of 2010 (Ivy League Rookie of the Year - Ice Hockey)",
     ],
     relevantProjects: [
       "AOPFN LP LEDSP Economic Development Strategy (2026)",
       "Witchekan Lake FN LEDSP Corporate Strategic Planning (2025-26)",
       "Whitefish Lake FN LEDSP Economic Development Master Plan (2025-26)",
+      "Neqotkuk (Tobique) FN Economic Development Sustainability Plan (2026)",
     ],
   },
   {
@@ -132,7 +133,7 @@ const team: TeamMember[] = [
       {
         title: "COO & Co-Founder",
         org: "melyn",
-        period: "Aug 2025 — Present",
+        period: "Aug 2025 - Present",
         bullets: [
           "Co-founded melyn and oversees all operations, financial management, and project delivery architecture",
           "Provides strategic and financial oversight on all economic development strategy engagements",
@@ -143,7 +144,7 @@ const team: TeamMember[] = [
       {
         title: "Vice President, Strategic Initiatives",
         org: "Steel River Group",
-        period: "Jan 2023 — Aug 2025",
+        period: "Jan 2023 - Aug 2025",
         bullets: [
           "Led consulting services delivering high-impact social and economic development to First Nations communities",
           "Collaborated with Chief, Council and leadership to understand community needs and tailor consulting services",
@@ -154,7 +155,7 @@ const team: TeamMember[] = [
       {
         title: "IT Business Analyst, Data & Process Improvement",
         org: "MasTec Canada",
-        period: "Jun 2021 — Jan 2023",
+        period: "Jun 2021 - Jan 2023",
         bullets: [
           "In-house SME for SharePoint and Power Platform (PowerBI, PowerAutomate, PowerApps)",
           "Built executive dashboards integrating data pipelines from SQL, Web APIs, and Azure Data Factory",
@@ -164,7 +165,7 @@ const team: TeamMember[] = [
       {
         title: "Business and IT Analytics Co-op",
         org: "CNOOC International",
-        period: "May 2019 — Aug 2020",
+        period: "May 2019 - Aug 2020",
         bullets: [
           "Led analytics platform upgrade and presented KPI models to Chief Information Officer",
           "Performed text mining and trend analysis using R on ServiceNow data",
@@ -172,7 +173,7 @@ const team: TeamMember[] = [
       },
     ],
     education: [
-      "University of British Columbia — Sauder School of Business",
+      "University of British Columbia - Sauder School of Business",
       "Bachelor of Commerce, Double Specialization in Business Technology Management and Operations & Logistics",
       "Dean's Honor Roll 2020-2021",
     ],
@@ -188,7 +189,7 @@ const team: TeamMember[] = [
       {
         title: "Team Lead, Empower Services",
         org: "melyn",
-        period: "Jan 2026 — Present",
+        period: "Jan 2026 - Present",
         bullets: [
           "Leads the Empower Services team, managing concurrent grant files, economic development strategies, and community engagement projects across Canada",
           "Serves as Project Co-Lead on economic development strategy engagements, providing day-to-day analytical and project management support",
@@ -199,7 +200,7 @@ const team: TeamMember[] = [
       {
         title: "Manager, Advisory Services",
         org: "Steel River Group",
-        period: "Apr 2025 — Dec 2025",
+        period: "Apr 2025 - Dec 2025",
         bullets: [
           "Led portfolio of 40+ concurrent projects spanning strategic planning, governance, economic development, and infrastructure for Indigenous governments",
           "Secured multi-million-dollar funding by authoring high-quality proposals and grant applications for major infrastructure, housing, and community development initiatives",
@@ -209,7 +210,7 @@ const team: TeamMember[] = [
       {
         title: "Consulting Business Analyst",
         org: "Steel River Group",
-        period: "Mar 2024 — Apr 2025",
+        period: "Mar 2024 - Apr 2025",
         bullets: [
           "Produced market, competitor, and trend analyses informing strategic decisions across energy, infrastructure, and Indigenous business sectors",
           "Contributed to proposal development and client presentations securing repeat engagements",
@@ -218,7 +219,7 @@ const team: TeamMember[] = [
       {
         title: "Quality Analyst",
         org: "CBI Health",
-        period: "Jun 2022 — Mar 2024",
+        period: "Jun 2022 - Mar 2024",
         bullets: [
           "Led comprehensive data cleansing for accreditation reporting across Western Canada",
           "Facilitated training and mentored quality team members",
@@ -227,15 +228,15 @@ const team: TeamMember[] = [
       {
         title: "Head Teaching Assistant, Entrepreneurship",
         org: "University of Calgary",
-        period: "May 2021 — May 2022",
+        period: "May 2021 - May 2022",
         bullets: [
           "Led team of 12, delivering course content to 200+ students per semester",
         ],
       },
     ],
     education: [
-      "M.Sc. Data Science and Analytics — University of Calgary",
-      "B.Comm. Business Technology Management — University of Calgary (CaseIT International Finalist 2021)",
+      "M.Sc. Data Science and Analytics - University of Calgary",
+      "B.Comm. Business Technology Management - University of Calgary (CaseIT International Finalist 2021)",
     ],
     certifications: [
       "Microsoft Azure Data Fundamentals (2023)",
@@ -253,7 +254,7 @@ const team: TeamMember[] = [
       {
         title: "Market Research and Business Analyst",
         org: "melyn",
-        period: "Sept 2025 — Present",
+        period: "Sept 2025 - Present",
         bullets: [
           "Conducts grant opportunity research across federal and provincial programs for First Nations clients",
           "Builds nation intelligence briefs and grant eligibility analyses supporting new client onboarding",
@@ -264,7 +265,7 @@ const team: TeamMember[] = [
       {
         title: "Sr. Market Research Analyst",
         org: "CBTS, Cincinnati Bell Technology Solutions",
-        period: "May 2019 — Present",
+        period: "May 2019 - Present",
         bullets: [
           "Interpreted insights from verbatim surveys for major brand clients including Nielsen, Kantar, Coca-Cola, Walmart, BMW, Disney, Netflix",
           "Built codebooks and category frameworks transforming open-ended data into structured intelligence",
@@ -273,7 +274,7 @@ const team: TeamMember[] = [
       {
         title: "Sr. Market Research Analyst",
         org: "Contus",
-        period: "Feb 2017 — Mar 2019",
+        period: "Feb 2017 - Mar 2019",
         bullets: [
           "Managed 2,000+ inbound leads per month through CRM automation and lead scoring",
           "Designed email marketing campaigns across IT, Automotive, and Media sectors",
@@ -283,7 +284,7 @@ const team: TeamMember[] = [
       {
         title: "Pre-Sales Executive",
         org: "MRCC Solutions",
-        period: "Apr 2016 — Jan 2017",
+        period: "Apr 2016 - Jan 2017",
         bullets: [
           "Identified new prospects across India, Middle East and US",
           "Conducted SWOT and competitor analysis for business development",
@@ -292,7 +293,7 @@ const team: TeamMember[] = [
       {
         title: "Data Analyst",
         org: "Scope e-Knowledge Center",
-        period: "Nov 2014 — Apr 2016",
+        period: "Nov 2014 - Apr 2016",
         bullets: [],
       },
     ],
@@ -327,7 +328,7 @@ const team: TeamMember[] = [
       {
         title: "Project Coordinator",
         org: "melyn",
-        period: "Oct 2025 — Present",
+        period: "Oct 2025 - Present",
         bullets: [
           "Coordinates grant applications and deliverables across multiple active client files",
           "Manages submission timelines, document preparation, and client communications",
@@ -338,7 +339,7 @@ const team: TeamMember[] = [
       {
         title: "UI Designer",
         org: "SEBIT Educational Technology",
-        period: "2022 — 2025",
+        period: "2022 - 2025",
         bullets: [
           "Improved and supervised UI components for educational platforms",
           "Transitioned existing products to no-code platforms with new design systems",
@@ -347,7 +348,7 @@ const team: TeamMember[] = [
       {
         title: "UI Designer",
         org: "Avocode UK / Catchy Games",
-        period: "2020 — 2022",
+        period: "2020 - 2022",
         bullets: [
           "Redesigned characters and interfaces for educational math game",
           "Created game screens, buttons, and animation assets for published mobile game on Android and iOS",
@@ -356,7 +357,7 @@ const team: TeamMember[] = [
       {
         title: "Visual Designer",
         org: "Erka Turizm / Customoz",
-        period: "2017 — 2020",
+        period: "2017 - 2020",
         bullets: [
           "Designed B2B and B2C print and digital materials for tourism campaigns",
           "Led multiple branding and visual identity projects",
@@ -510,7 +511,7 @@ const ResumeCard = ({
         </div>
       </div>
 
-      {/* Body — two columns */}
+      {/* Body - two columns */}
       <div className="px-8 py-6 grid md:grid-cols-[1fr_1.4fr] gap-8">
         {/* Left column: Summary + Skills + Certifications + Education (if no experience-heavy right) */}
         <div className="space-y-6">
@@ -643,7 +644,7 @@ const ResumesPage = () => (
         {/* Page header */}
         <motion.div {...fadeUp} className="text-center mb-16">
           <span className="inline-block px-5 py-2 rounded-full text-sm font-semibold bg-primary/10 text-primary border border-primary/20 mb-6">
-            Appendix A — Project Team
+            Appendix A - Project Team
           </span>
           <h1 className="font-display text-3xl md:text-5xl font-bold mb-4">
             Team <span className="text-gradient">Resumes</span>

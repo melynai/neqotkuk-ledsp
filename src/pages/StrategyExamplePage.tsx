@@ -3,35 +3,35 @@ import { ChevronDown, ChevronUp, ArrowLeft, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-/* ── PIB Economic Development Opportunity Table ── */
+/* ── Neqotkuk Economic Development Opportunity Table ── */
 const PRIORITY_PROJECTS = [
-  { name: "Gas Station & Convenience Retail", sector: "Retail Energy", partner: "Nation-owned", status: "Phase I Priority — site identified", note: "High own-source revenue potential" },
-  { name: "Development Corporation", sector: "Governance", partner: "Nation-owned LP", status: "Phase I Priority — structure to be designed", note: "Revenue diversification anchor" },
-  { name: "Snpink'tn Tourism Hub", sector: "Tourism & Culture", partner: "Destination BC alignment", status: "Phase II — feasibility in progress", note: "46,000+ acre territory advantage" },
-  { name: "Short-Term Rental (Okanagan)", sector: "Hospitality", partner: "Airbnb / Direct", status: "Near-term opportunity — land available", note: "High Okanagan tourism demand" },
-  { name: "Commercial Lease Expansion", sector: "Real Estate", partner: "Private tenants", status: "Ongoing — reserve land leverage", note: "Low capital, recurring revenue" },
+  { name: "Forestry Operations & Value-Added Processing", sector: "Natural Resources", partner: "Nation-owned", status: "Phase I Priority - capacity assessment underway", note: "High own-source revenue potential" },
+  { name: "Economic Development Corporation", sector: "Governance", partner: "Nation-owned LP", status: "Phase I Priority - structure to be designed", note: "Revenue diversification anchor" },
+  { name: "Wolastoqey Cultural Tourism Hub", sector: "Tourism & Culture", partner: "Tourism New Brunswick alignment", status: "Phase II - feasibility in progress", note: "Saint John River Valley advantage" },
+  { name: "Cannabis Production & Retail", sector: "Agriculture & Cannabis", partner: "Licensed partners / Direct", status: "Near-term opportunity - regulatory pathway active", note: "Growing national market demand" },
+  { name: "Commercial Real Estate Development", sector: "Real Estate", partner: "Private tenants", status: "Ongoing - reserve land leverage", note: "Low capital, recurring revenue" },
   { name: "EDAC Formation", sector: "Governance", partner: "Community-led", status: "Phase I Deliverable", note: "Required for grant eligibility" },
 ];
 
 const CHALLENGES = {
   critical: [
-    { title: "No Development Corporation", desc: "PIB currently lacks the corporate structure to hold equity, enter partnerships, or access certain federal business development programs. Forming a dev corp is a Phase I priority." },
-    { title: "Grant Access Gap", desc: "Without an EDAC and formal economic development plan, PIB is ineligible for major federal programs including ISC Economic Development and PrairiesCan REGI." },
-    { title: "Governance Bandwidth", desc: "Council and administration are managing a high volume of community priorities simultaneously — a dedicated economic development officer or coordinator is needed." },
+    { title: "No Development Corporation", desc: "Neqotkuk currently lacks the corporate structure to hold equity, enter partnerships, or access certain federal business development programs. Forming a dev corp is a Phase I priority." },
+    { title: "Grant Access Gap", desc: "Without an EDAC and formal economic development plan, Neqotkuk is ineligible for major federal programs including ISC Economic Development and ACOA funding streams." },
+    { title: "Governance Bandwidth", desc: "Council and administration are managing a high volume of community priorities simultaneously - a dedicated economic development officer or coordinator is needed." },
   ],
   high: [
-    { title: "Tourism Infrastructure", desc: "The Okanagan is one of Canada's premier tourism destinations, but PIB lacks developed tourism assets to capture its share of the $1.2B regional tourism economy." },
-    { title: "Revenue Concentration", desc: "Current own-source revenue is concentrated in a small number of streams. Diversification into retail, hospitality, and land development reduces long-term risk." },
-    { title: "Land Use Planning", desc: "46,000+ acres of reserve and traditional territory represent significant untapped economic potential — a formal land use plan would unlock development opportunities." },
+    { title: "Tourism Infrastructure", desc: "The Saint John River Valley has significant untapped eco-tourism potential, but Neqotkuk lacks developed tourism assets to capture its share of New Brunswick's growing tourism economy." },
+    { title: "Revenue Concentration", desc: "Current own-source revenue is concentrated in a small number of streams. Diversification into forestry, cannabis, renewable energy, and real estate development reduces long-term risk." },
+    { title: "Land Use Planning", desc: "Reserve and traditional territory along the Wolastoq (Saint John River) represent significant untapped economic potential - a formal land use plan would unlock development opportunities." },
   ],
   medium: [
-    { title: "Community Engagement", desc: "Community members need visibility into economic development priorities and the ability to shape decisions — especially for land use and business ventures that affect daily life." },
-    { title: "Workforce Readiness", desc: "Okanagan labour market competition is intense. Training and Indigenous workforce development programs should be embedded in the strategy." },
+    { title: "Community Engagement", desc: "Community members need visibility into economic development priorities and the ability to shape decisions - especially for land use and business ventures that affect daily life." },
+    { title: "Workforce Readiness", desc: "Regional labour market competition requires attention. Training and Indigenous workforce development programs should be embedded in the strategy." },
     { title: "Technology & Reporting", desc: "No centralized system for tracking economic development initiatives, grant pipelines, or community benefit reporting. melyn Brain directly addresses this gap." },
   ],
   low: [
-    { title: "Seasonal Tourism Concentration", desc: "Okanagan tourism peaks in summer — revenue diversification across seasons (wine, skiing, cultural events) will stabilize cash flows." },
-    { title: "Regional Competition", desc: "Other South Okanagan municipalities and First Nations are also developing tourism and commercial offerings — early mover advantage is valuable." },
+    { title: "Seasonal Tourism Concentration", desc: "Saint John River Valley tourism peaks in summer - revenue diversification across seasons (cultural events, winter eco-tourism, harvest festivals) will stabilize cash flows." },
+    { title: "Regional Competition", desc: "Other First Nations and municipalities in the region are also developing tourism and commercial offerings - early mover advantage is valuable." },
   ],
 };
 
@@ -42,7 +42,7 @@ const STRATEGIC_PRIORITIES = [
     horizon: "Year 1",
     color: "hsl(200,41%,30%)",
     items: [
-      "Establish PIB Development Corporation (LP or Corp structure TBD with legal counsel)",
+      "Establish Neqotkuk Economic Development Corporation (LP or Corp structure TBD with legal counsel)",
       "Form Economic Development Advisory Committee (EDAC)",
       "Hire or designate Economic Development Officer",
       "Develop Community Economic Development Policy",
@@ -54,10 +54,10 @@ const STRATEGIC_PRIORITIES = [
     horizon: "Year 1-2",
     color: "hsl(200,42%,40%)",
     items: [
-      "Develop gas station and convenience retail on reserve — target $500K+ annual revenue",
+      "Advance forestry operations and value-added wood processing on reserve - target sustainable harvest revenue",
       "Expand commercial lease program on reserve lands",
-      "Launch short-term rental pilot using available reserve land in high-demand Okanagan tourism corridor",
-      "Apply for ISC Economic Development funding to support dev corp formation",
+      "Launch cannabis production and retail operations leveraging regulatory pathways",
+      "Apply for ISC Economic Development and ACOA funding to support dev corp formation",
     ],
   },
   {
@@ -66,10 +66,10 @@ const STRATEGIC_PRIORITIES = [
     horizon: "Year 2-3",
     color: "hsl(160,50%,45%)",
     items: [
-      "Develop Snpink'tn Cultural Tourism experience — guided tours, cultural events, land-based programming",
+      "Develop Wolastoqey Cultural Tourism experience - guided river tours, cultural events, land-based programming",
       "Create Indigenous tourism certification through ITAC",
-      "Partner with Okanagan tourism operators and Destination BC",
-      "Explore glamping, eco-lodge, or boutique accommodation on the 46,000+ acre territory",
+      "Partner with regional tourism operators and Tourism New Brunswick",
+      "Explore eco-lodge, glamping, or boutique accommodation along the Saint John River corridor",
     ],
   },
   {
@@ -79,9 +79,9 @@ const STRATEGIC_PRIORITIES = [
     color: "hsl(210,60%,55%)",
     items: [
       "Complete formal Reserve Land Use Plan",
-      "Identify commercial, residential, and conservation zones across PIB territory",
-      "Evaluate joint venture opportunities with Okanagan private sector partners",
-      "Develop multi-year Capital Investment Plan tied to grant opportunities",
+      "Identify commercial, residential, and conservation zones across Neqotkuk territory",
+      "Evaluate joint venture opportunities with regional private sector partners and Wolastoqiyik Ajemseg",
+      "Develop multi-year Capital Investment Plan tied to ACOA and federal grant opportunities",
     ],
   },
 ];
@@ -133,15 +133,15 @@ export default function StrategyExamplePage() {
         {/* Intro Banner */}
         <motion.div {...fadeUp} className="card-elevated p-6 mb-10 border-l-4 border-primary bg-primary/5">
           <h1 className="font-display text-2xl font-bold text-foreground mb-2">
-            snpink'tn (Penticton) Indian Band — Economic Development Strategy
+            Neqotkuk (Tobique) First Nation - Economic Development Strategy
           </h1>
           <p className="text-muted-foreground text-sm mb-3">
             This is a <strong>sample deliverable</strong> showing what your completed Economic Development Strategic Plan will look like
-            when built on the melyn platform. The final strategy will be co-created with Chief, Council, and community — this preview
-            uses publicly available PIB data and melyn's initial research.
+            when built on the melyn platform. The final strategy will be co-created with Chief, Council, and community - this preview
+            uses publicly available Neqotkuk data and melyn's initial research.
           </p>
           <div className="flex flex-wrap gap-2 text-xs">
-            {["South Okanagan, BC", "46,000+ Acres", "$11M+ Own-Source Revenue", "Phase I: Gas Station, Dev Corp, EDAC"].map(tag => (
+            {["Saint John River Valley, NB", "Wolastoqey Territory", "Forestry, Cannabis, Renewable Energy", "Phase I: Dev Corp, EDAC, Forestry Ops"].map(tag => (
               <span key={tag} className="bg-primary/10 text-primary px-2.5 py-1 rounded-full font-medium">{tag}</span>
             ))}
           </div>
@@ -185,38 +185,38 @@ export default function StrategyExamplePage() {
         <motion.div {...fadeUp}>
           <h2 className="font-display text-xl font-bold text-foreground mb-4">Key Assets</h2>
 
-          <Section title="Land Base and Territory (46,000+ Acres)" defaultOpen>
+          <Section title="Land Base and Territory along the Wolastoq" defaultOpen>
             <ul className="space-y-2 text-sm text-foreground mt-4">
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> South Okanagan reserve lands — some of the most valuable real estate in BC based on tourism and agricultural demand</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Traditional territory spanning the full Okanagan valley — active consultation and land use rights</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Agricultural land base — viticulture, orchards, and food sovereignty potential</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Proximity to Penticton (pop. 35,000+) and Highway 97 commercial corridor</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Reserve lands along the Wolastoq (Saint John River) - rich in forestry, agriculture, and natural resource potential</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Traditional Wolastoqey territory spanning the Saint John River Valley - active consultation and land use rights</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Agricultural and forestry land base - timber, biomass, and food sovereignty potential</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Proximity to Trans-Canada Highway and Route 105 corridor connecting northern New Brunswick</li>
             </ul>
           </Section>
 
           <Section title="Financial Position">
             <ul className="space-y-2 text-sm text-foreground mt-4">
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> $11M+ in own-source revenue — strong foundation for economic self-determination</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Established own-source revenue streams provide collateral and matched-funding capacity for grants</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Federal and provincial transfer funding — stable base for operational programs</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Existing own-source revenue streams - foundation for economic self-determination</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Established revenue streams provide collateral and matched-funding capacity for ACOA and federal grants</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Federal and provincial transfer funding - stable base for operational programs</li>
             </ul>
           </Section>
 
           <Section title="Tourism and Regional Context">
             <ul className="space-y-2 text-sm text-foreground mt-4">
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Okanagan is BC's fastest-growing tourism region — wine, beaches, skiing, cultural tourism</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Penticton hosts major events (Ironman, Peach Fest, Okanagan Wine Festival) driving peak visitor traffic</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Growing demand for Indigenous cultural tourism experiences across BC</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Proximity to Okanagan Mountain Provincial Park and Skaha Bluffs Provincial Park</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Saint John River Valley offers growing eco-tourism potential - river-based tourism, cultural experiences, outdoor recreation</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> New Brunswick's tourism sector is expanding with focus on Indigenous cultural tourism and nature-based experiences</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Growing demand for Indigenous cultural tourism experiences across Atlantic Canada</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Proximity to Mount Carleton Provincial Park and Tobique River wilderness areas</li>
             </ul>
           </Section>
 
           <Section title="Community and Governance Strengths">
             <ul className="space-y-2 text-sm text-foreground mt-4">
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> New EDO Logan Tait-Reaume providing dedicated economic development capacity</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Active Chief and Council with economic development as a stated priority</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Engaged community members in Penticton and surrounding area</li>
-              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Okanagan Nation Alliance membership — access to regional advocacy and resources</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Dedicated leadership with economic development as a stated priority</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Active Chief and Council committed to community-driven economic growth</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Engaged community members in Tobique and surrounding area</li>
+              <li className="flex gap-2"><span className="text-primary font-bold">-</span> Wolastoqey Nation and Wolastoqiyik Ajemseg membership - access to regional advocacy and resources</li>
             </ul>
           </Section>
         </motion.div>
@@ -279,10 +279,10 @@ export default function StrategyExamplePage() {
 
         {/* Footer CTA */}
         <motion.div {...fadeUp} className="mt-12 card-elevated p-8 text-center border-2 border-primary/20 bg-primary/5">
-          <h3 className="font-display text-xl font-bold text-foreground mb-2">This is what your strategy looks like — built live.</h3>
+          <h3 className="font-display text-xl font-bold text-foreground mb-2">This is what your strategy looks like - built live.</h3>
           <p className="text-muted-foreground text-sm mb-4 max-w-xl mx-auto">
-            The final Economic Development Strategic Plan for snpink'tn will be built through community engagement,
-            land assessments, and financial modeling — then published as a living digital platform your team can update,
+            The final Economic Development Strategic Plan for Neqotkuk will be built through community engagement,
+            land assessments, and financial modeling - then published as a living digital platform your team can update,
             share, and act from.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">

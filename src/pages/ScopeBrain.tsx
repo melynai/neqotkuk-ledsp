@@ -53,7 +53,7 @@ const capabilities = [
     title: "Chambers",
     tagline: "Run every committee at the Nation",
     description:
-      "Brain is built to operate committees at the Nation level — Economic Development Advisory Committee (EDAC), Finance Committee, Housing Committee, and more. Each committee gets its own workspace: agenda management, meeting minutes, action tracking, and reporting to Chief and Council. Decisions flow through Draft → Under Review → Committee Vote → Approved. Nothing falls through the cracks.",
+      "Brain is built to operate committees at the Nation level  - Economic Development Advisory Committee (EDAC), Finance Committee, Housing Committee, and more. Each committee gets its own workspace: agenda management, meeting minutes, action tracking, and reporting to Chief and Council. Decisions flow through Draft → Under Review → Committee Vote → Approved. Nothing falls through the cracks.",
     color: "hsl(200, 22%, 52%)",
     mockType: "pipeline" as const,
     mockData: [
@@ -471,7 +471,7 @@ export default function ScopeBrain() {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Brain is built to operate your Nation end-to-end — departments, committees (EDAC, Finance, Housing), projects, grants, and governance — so leadership can focus on what matters most: your people.
+            Brain is built to operate your Nation end-to-end  - departments, committees (EDAC, Finance, Housing), projects, grants, and governance  - so leadership can focus on what matters most: your people.
           </motion.p>
 
           {/* Module pills */}

@@ -6,20 +6,21 @@ const fadeUp = { initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0
 
 /* ── Budget data ── */
 const budgetItems = [
-  { label: "Phase 1  -  Project Initiation", amount: 5000, percent: 10.8, barClass: "budget-bar-brain" },
-  { label: "Phase 2  -  Engagement and Baseline", amount: 16000, percent: 34.4, barClass: "budget-bar-website" },
-  { label: "Phase 3  -  Strategic Planning", amount: 15000, percent: 32.3, barClass: "budget-bar-hr" },
-  { label: "Phase 4  -  Finalization", amount: 6500, percent: 14.0, barClass: "budget-bar-phase4" },
-  { label: "PM and Admin", amount: 4000, percent: 8.6, barClass: "budget-bar-pm" },
+  { label: "Phase 1 - Project Initiation", amount: 4500, percent: 7.0, barClass: "budget-bar-brain" },
+  { label: "Phase 2 - Engagement and Baseline", amount: 12000, percent: 18.6, barClass: "budget-bar-website" },
+  { label: "Phase 3 - Strategic Planning", amount: 19500, percent: 30.2, barClass: "budget-bar-hr" },
+  { label: "Phase 4 - Finalization", amount: 10500, percent: 16.3, barClass: "budget-bar-phase4" },
+  { label: "Digital Strategy Platform", amount: 12000, percent: 18.6, barClass: "budget-bar-website" },
+  { label: "PM and Admin", amount: 6000, percent: 9.3, barClass: "budget-bar-pm" },
 ];
 
 /* ── melyn Brain add-on line items ── */
 const brainItems = [
-  { label: "Platform Setup & Configuration", amount: 12000 },
-  { label: "Data Migration & Integration", amount: 10000 },
-  { label: "Training & Onboarding", amount: 8000 },
-  { label: "12-Month Platform License", amount: 20000 },
-  { label: "Dedicated Support (12 months)", amount: 9500 },
+  { label: "Platform Setup & Configuration", amount: 15000 },
+  { label: "Data Migration & Integration", amount: 12000 },
+  { label: "Training & Onboarding", amount: 10000 },
+  { label: "12-Month Platform License", amount: 30000 },
+  { label: "Dedicated Support (12 months)", amount: 13000 },
 ];
 
 /* ── Step data per phase ── */
@@ -27,39 +28,42 @@ type BudgetStep = { step: string; label: string; cost: string; roles: { role: st
 
 const phase1Steps: BudgetStep[] = [
   {
-    step: "1.1", label: "Project Kick-Off and Charter", cost: "$1,700",
+    step: "1.1", label: "Project Kick-Off and Charter", cost: "$1,500",
     roles: [
       { role: "Project Lead", hrs: 2, rate: 350, cost: 700 },
-      { role: "Lead Analyst", hrs: 3.5, rate: 200, cost: 700 },
-      { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
+      { role: "Lead Analyst", hrs: 2, rate: 200, cost: 400 },
+      { role: "Indigenous Engagement Advisor", hrs: 1, rate: 175, cost: 175 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
     ],
   },
   {
-    step: "1.2", label: "Engagement Plan", cost: "$1,650",
+    step: "1.2", label: "Engagement Plan", cost: "$1,175",
     roles: [
-      { role: "Lead Analyst", hrs: 5, rate: 200, cost: 1000 },
-      { role: "BC Cultural Advisor", hrs: 2, rate: 175, cost: 350 },
-      { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
+      { role: "Lead Analyst", hrs: 3, rate: 200, cost: 600 },
+      { role: "Governance Advisor", hrs: 2, rate: 175, cost: 350 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
     ],
   },
   {
-    step: "1.3", label: "WBS and Project Schedule", cost: "$1,100",
+    step: "1.3", label: "WBS and Project Schedule", cost: "$825",
     roles: [
-      { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
-      { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
+      { role: "Lead Analyst", hrs: 2, rate: 200, cost: 400 },
+      { role: "Market Research", hrs: 2, rate: 100, cost: 200 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
     ],
   },
   {
-    step: "1.4", label: "BCR and Briefing Note", cost: "$350",
-    roles: [
-      { role: "Lead Analyst", hrs: 1, rate: 200, cost: 200 },
-      { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
-    ],
-  },
-  {
-    step: "PM", label: "Phase 1 Project Management", cost: "$200",
+    step: "1.4", label: "Briefing Note", cost: "$500",
     roles: [
       { role: "Lead Analyst", hrs: 1, rate: 200, cost: 200 },
+      { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
+    ],
+  },
+  {
+    step: "PM", label: "Phase 1 Project Management", cost: "$500",
+    roles: [
+      { role: "Lead Analyst", hrs: 2, rate: 200, cost: 400 },
+      { role: "Market Research", hrs: 1, rate: 100, cost: 100 },
     ],
   },
 ];
@@ -68,174 +72,200 @@ const phase2Steps: BudgetStep[] = [
   {
     step: "2.1", label: "Engagement Design", cost: "$1,750",
     roles: [
-      { role: "Lead Analyst", hrs: 5, rate: 200, cost: 1000 },
-      { role: "BC Cultural Advisor", hrs: 3, rate: 175, cost: 525 },
+      { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
+      { role: "Governance Advisor", hrs: 2, rate: 175, cost: 350 },
+      { role: "Indigenous Engagement Advisor", hrs: 1, rate: 175, cost: 175 },
+      { role: "Market Research", hrs: 2, rate: 100, cost: 200 },
       { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
     ],
   },
   {
-    step: "2.2", label: "Community Engagement Sessions", cost: "$4,700",
+    step: "2.2", label: "Community Engagement Sessions", cost: "$3,050",
     roles: [
-      { role: "Lead Analyst", hrs: 8, rate: 200, cost: 1600 },
-      { role: "Indigenous Engagement Advisor", hrs: 8, rate: 175, cost: 1400 },
-      { role: "BC Cultural Advisor", hrs: 4, rate: 175, cost: 700 },
-      { role: "Research Analyst", hrs: 7, rate: 100, cost: 700 },
+      { role: "Project Lead", hrs: 2, rate: 350, cost: 700 },
+      { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
+      { role: "Indigenous Engagement Advisor", hrs: 4, rate: 175, cost: 700 },
+      { role: "Governance Advisor", hrs: 2, rate: 175, cost: 350 },
+      { role: "Market Research", hrs: 2, rate: 100, cost: 200 },
       { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
     ],
   },
   {
-    step: "2.3", label: "Stakeholder Interviews", cost: "$2,150",
+    step: "2.3", label: "Stakeholder Interviews", cost: "$1,700",
     roles: [
-      { role: "Lead Analyst", hrs: 5, rate: 200, cost: 1000 },
-      { role: "Indigenous Engagement Advisor", hrs: 4, rate: 175, cost: 700 },
-      { role: "Research Analyst", hrs: 3, rate: 100, cost: 300 },
+      { role: "Lead Analyst", hrs: 3, rate: 200, cost: 600 },
+      { role: "Indigenous Engagement Advisor", hrs: 3, rate: 175, cost: 525 },
+      { role: "Market Research", hrs: 2, rate: 100, cost: 200 },
+      { role: "Project Coordinator", hrs: 5, rate: 75, cost: 375 },
+    ],
+  },
+  {
+    step: "2.4", label: "Stakeholder Register", cost: "$700",
+    roles: [
+      { role: "Lead Analyst", hrs: 1, rate: 200, cost: 200 },
+      { role: "Market Research", hrs: 2, rate: 100, cost: 200 },
+      { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
+    ],
+  },
+  {
+    step: "2.5", label: "Socio-Economic Baseline", cost: "$1,700",
+    roles: [
+      { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
+      { role: "Market Research", hrs: 6, rate: 100, cost: 600 },
+      { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
+    ],
+  },
+  {
+    step: "2.6", label: "Economic Opportunity Scan", cost: "$1,500",
+    roles: [
+      { role: "Project Lead", hrs: 1, rate: 350, cost: 350 },
+      { role: "Lead Analyst", hrs: 3, rate: 200, cost: 600 },
+      { role: "Market Research", hrs: 4, rate: 100, cost: 400 },
       { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
     ],
   },
   {
-    step: "2.4", label: "Stakeholder Register", cost: "$750",
+    step: "2.7", label: "Pre-Planning Assessment Report", cost: "$1,200",
+    roles: [
+      { role: "Lead Analyst", hrs: 3, rate: 200, cost: 600 },
+      { role: "Governance Advisor", hrs: 1, rate: 175, cost: 175 },
+      { role: "Market Research", hrs: 2, rate: 100, cost: 200 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
+    ],
+  },
+  {
+    step: "PM", label: "Phase 2 Project Management", cost: "$400",
     roles: [
       { role: "Lead Analyst", hrs: 2, rate: 200, cost: 400 },
-      { role: "Research Analyst", hrs: 2, rate: 100, cost: 200 },
-      { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
-    ],
-  },
-  {
-    step: "2.5", label: "Socio-Economic Baseline", cost: "$2,150",
-    roles: [
-      { role: "Lead Analyst", hrs: 5, rate: 200, cost: 1000 },
-      { role: "Research Analyst", hrs: 10, rate: 100, cost: 1000 },
-      { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
-    ],
-  },
-  {
-    step: "2.6", label: "Economic Opportunity Scan", cost: "$2,750",
-    roles: [
-      { role: "Lead Analyst", hrs: 8, rate: 200, cost: 1600 },
-      { role: "Research Analyst", hrs: 7, rate: 100, cost: 700 },
-      { role: "Project Coordinator", hrs: 6, rate: 75, cost: 450 },
-    ],
-  },
-  {
-    step: "2.7", label: "Pre-Planning Assessment Report", cost: "$1,750",
-    roles: [
-      { role: "Lead Analyst", hrs: 6, rate: 200, cost: 1200 },
-      { role: "Research Analyst", hrs: 4, rate: 100, cost: 400 },
-      { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
     ],
   },
 ];
 
 const phase3Steps: BudgetStep[] = [
   {
-    step: "3.1", label: "Synthesis and Findings", cost: "$1,550",
+    step: "3.1", label: "Synthesis and Findings", cost: "$2,000",
     roles: [
-      { role: "Lead Analyst", hrs: 5, rate: 200, cost: 1000 },
-      { role: "Research Analyst", hrs: 4, rate: 100, cost: 400 },
-      { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
-    ],
-  },
-  {
-    step: "3.2", label: "Vision and Guiding Principles", cost: "$1,400",
-    roles: [
-      { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
-      { role: "Indigenous Engagement Advisor", hrs: 2, rate: 175, cost: 350 },
-      { role: "Research Analyst", hrs: 1, rate: 100, cost: 100 },
-      { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
-    ],
-  },
-  {
-    step: "3.3", label: "Strategic Priorities", cost: "$2,850",
-    roles: [
-      { role: "Project Lead", hrs: 1, rate: 350, cost: 350 },
-      { role: "Lead Analyst", hrs: 8, rate: 200, cost: 1600 },
-      { role: "BC Cultural Advisor", hrs: 2, rate: 175, cost: 350 },
-      { role: "Research Analyst", hrs: 4, rate: 100, cost: 400 },
-      { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
-    ],
-  },
-  {
-    step: "3.4", label: "Implementation Framework", cost: "$3,050",
-    roles: [
-      { role: "Project Lead", hrs: 2, rate: 350, cost: 700 },
-      { role: "Lead Analyst", hrs: 8, rate: 200, cost: 1600 },
-      { role: "BC Cultural Advisor", hrs: 2, rate: 175, cost: 350 },
-      { role: "Research Analyst", hrs: 4, rate: 100, cost: 400 },
-    ],
-  },
-  {
-    step: "3.5", label: "KPIs and Performance Measurement", cost: "$1,700",
-    roles: [
-      { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
-      { role: "Research Analyst", hrs: 6, rate: 100, cost: 600 },
+      { role: "Lead Analyst", hrs: 6, rate: 200, cost: 1200 },
+      { role: "Market Research", hrs: 5, rate: 100, cost: 500 },
       { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
     ],
   },
   {
-    step: "3.6", label: "Draft Strategic Plan", cost: "$2,450",
+    step: "3.2", label: "Vision and Guiding Principles", cost: "$2,275",
     roles: [
-      { role: "Lead Analyst", hrs: 9, rate: 200, cost: 1800 },
-      { role: "Research Analyst", hrs: 5, rate: 100, cost: 500 },
+      { role: "Lead Analyst", hrs: 5, rate: 200, cost: 1000 },
+      { role: "Indigenous Engagement Advisor", hrs: 3, rate: 175, cost: 525 },
+      { role: "Governance Advisor", hrs: 3, rate: 175, cost: 525 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
+    ],
+  },
+  {
+    step: "3.3", label: "Strategic Priorities", cost: "$3,950",
+    roles: [
+      { role: "Project Lead", hrs: 2, rate: 350, cost: 700 },
+      { role: "Lead Analyst", hrs: 10, rate: 200, cost: 2000 },
+      { role: "Governance Advisor", hrs: 3, rate: 175, cost: 525 },
+      { role: "Market Research", hrs: 5, rate: 100, cost: 500 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
+    ],
+  },
+  {
+    step: "3.4", label: "Implementation Framework", cost: "$3,875",
+    roles: [
+      { role: "Project Lead", hrs: 2, rate: 350, cost: 700 },
+      { role: "Lead Analyst", hrs: 10, rate: 200, cost: 2000 },
+      { role: "Governance Advisor", hrs: 3, rate: 175, cost: 525 },
+      { role: "Market Research", hrs: 5, rate: 100, cost: 500 },
       { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
     ],
   },
   {
-    step: "3.7", label: "Live Digital Platform", cost: "$2,000",
+    step: "3.5", label: "KPIs and Performance Measurement", cost: "$2,300",
     roles: [
       { role: "Lead Analyst", hrs: 6, rate: 200, cost: 1200 },
-      { role: "Research Analyst", hrs: 8, rate: 100, cost: 800 },
+      { role: "Market Research", hrs: 8, rate: 100, cost: 800 },
+      { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
+    ],
+  },
+  {
+    step: "3.6", label: "Draft Strategic Plan", cost: "$2,700",
+    roles: [
+      { role: "Lead Analyst", hrs: 9, rate: 200, cost: 1800 },
+      { role: "Market Research", hrs: 6, rate: 100, cost: 600 },
+      { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
+    ],
+  },
+  {
+    step: "3.7", label: "Live Digital Platform", cost: "$2,400",
+    roles: [
+      { role: "Project Lead", hrs: 2, rate: 350, cost: 700 },
+      { role: "Lead Analyst", hrs: 5, rate: 200, cost: 1000 },
+      { role: "Market Research", hrs: 4, rate: 100, cost: 400 },
+      { role: "Project Coordinator", hrs: 4, rate: 75, cost: 300 },
     ],
   },
 ];
 
 const phase4Steps: BudgetStep[] = [
   {
-    step: "4.1", label: "Finalize and Incorporate Feedback", cost: "$1,700",
+    step: "4.1", label: "Finalize and Incorporate Feedback", cost: "$2,300",
     roles: [
       { role: "Lead Analyst", hrs: 6, rate: 200, cost: 1200 },
-      { role: "BC Cultural Advisor", hrs: 2, rate: 175, cost: 350 },
-      { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
-    ],
-  },
-  {
-    step: "4.2", label: "Final Presentation to Chief and Council", cost: "$1,150",
-    roles: [
-      { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
+      { role: "Governance Advisor", hrs: 3, rate: 175, cost: 525 },
       { role: "Indigenous Engagement Advisor", hrs: 2, rate: 175, cost: 350 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
     ],
   },
   {
-    step: "4.3", label: "Community Communications Package", cost: "$1,550",
+    step: "4.2", label: "Final Presentation to Chief and Council", cost: "$2,250",
+    roles: [
+      { role: "Project Lead", hrs: 2, rate: 350, cost: 700 },
+      { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
+      { role: "Indigenous Engagement Advisor", hrs: 3, rate: 175, cost: 525 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
+    ],
+  },
+  {
+    step: "4.3", label: "Community Communications Package", cost: "$2,250",
+    roles: [
+      { role: "Lead Analyst", hrs: 5, rate: 200, cost: 1000 },
+      { role: "Governance Advisor", hrs: 3, rate: 175, cost: 525 },
+      { role: "Market Research", hrs: 5, rate: 100, cost: 500 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
+    ],
+  },
+  {
+    step: "4.4", label: "Short-Form Summary Video", cost: "$1,325",
     roles: [
       { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
-      { role: "BC Cultural Advisor", hrs: 2, rate: 175, cost: 350 },
-      { role: "Research Analyst", hrs: 4, rate: 100, cost: 400 },
+      { role: "Market Research", hrs: 3, rate: 100, cost: 300 },
+      { role: "Project Coordinator", hrs: 3, rate: 75, cost: 225 },
     ],
   },
   {
-    step: "4.4", label: "Short-Form Summary Video", cost: "$950",
+    step: "4.5", label: "Lessons Learned Register", cost: "$875",
     roles: [
       { role: "Lead Analyst", hrs: 3, rate: 200, cost: 600 },
-      { role: "Research Analyst", hrs: 2, rate: 100, cost: 200 },
-      { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
+      { role: "Market Research", hrs: 2, rate: 100, cost: 200 },
+      { role: "Project Coordinator", hrs: 1, rate: 75, cost: 75 },
     ],
   },
   {
-    step: "4.5", label: "Lessons Learned and Close-Out", cost: "$1,150",
+    step: "4.6", label: "Project Close-Out Package", cost: "$1,500",
     roles: [
       { role: "Lead Analyst", hrs: 4, rate: 200, cost: 800 },
-      { role: "Research Analyst", hrs: 2, rate: 100, cost: 200 },
+      { role: "Governance Advisor", hrs: 2, rate: 175, cost: 350 },
+      { role: "Market Research", hrs: 2, rate: 100, cost: 200 },
       { role: "Project Coordinator", hrs: 2, rate: 75, cost: 150 },
     ],
   },
 ];
 
 const paymentTerms = [
-  "Nation contribution: $0 upfront",
-  "Milestone-based invoicing per RFP Section 8.4",
+  "Milestone-based invoicing",
   "HST applicable on all fees",
-  "Project start: March 30, 2026",
-  "Strategy Plus implementation may qualify for PIB and provincial grant funding",
+  "Project start: Immediately upon award",
+  "Strategy Plus may qualify for federal and provincial grant funding",
 ];
 
 /* ── CollapsiblePhase wrapper ── */
@@ -316,7 +346,7 @@ const BudgetStepTable = ({
                     <td className="py-1.5 px-3" />
                     <td className="py-1.5 px-3 text-[11px] text-muted-foreground">{r.role}</td>
                     <td className="py-1.5 px-3 text-[11px] text-right text-muted-foreground whitespace-nowrap" colSpan={2}>
-                      {r.hrs !== null && r.rate !== null ? `${r.hrs} hrs × $${r.rate} = ` : ""}
+                      {r.hrs !== null && r.rate !== null ? `${r.hrs} hrs x $${r.rate} = ` : ""}
                       <span className="font-medium text-foreground">${r.cost.toLocaleString()}</span>
                     </td>
                   </tr>
@@ -338,10 +368,10 @@ const BudgetStepTable = ({
 const BudgetSection = () => {
   const [option, setOption] = useState<"strategy" | "brain">("strategy");
   const isBrain = option === "brain";
-  const totalDisplay = isBrain ? "$106K" : "$46.5K";
+  const totalDisplay = isBrain ? "$144.5K" : "$64.5K";
 
   const displayBudgetItems = isBrain
-    ? [...budgetItems, { label: "Phase 5  -  melyn Brain", amount: 59500, percent: 0, barClass: "bg-amber-500" }]
+    ? [...budgetItems, { label: "Phase 5 - melyn Brain", amount: 80000, percent: 0, barClass: "bg-amber-500" }]
     : budgetItems;
 
   // Recalculate percentages when brain is selected
@@ -352,21 +382,23 @@ const BudgetSection = () => {
   }));
 
   // Pie chart segments
-  const circumference = 2 * Math.PI * 40; // r=40 → 251.3
+  const circumference = 2 * Math.PI * 40; // r=40 -> 251.3
   const baseSegments = [
-    { percent: 10.8, color: "hsl(200,41%,30%)", label: "Phase 1", value: "$5K" },
-    { percent: 34.4, color: "hsl(200,42%,40%)", label: "Phase 2", value: "$16K" },
-    { percent: 32.3, color: "hsl(160,50%,45%)", label: "Phase 3", value: "$15K" },
-    { percent: 14.0, color: "hsl(210,60%,55%)", label: "Phase 4", value: "$6.5K" },
-    { percent: 8.6,  color: "hsl(200,50%,60%)", label: "PM & Admin", value: "$4K" },
+    { percent: 7.0, color: "hsl(200,41%,30%)", label: "Phase 1", value: "$4.5K" },
+    { percent: 18.6, color: "hsl(200,42%,40%)", label: "Phase 2", value: "$12K" },
+    { percent: 30.2, color: "hsl(160,50%,45%)", label: "Phase 3", value: "$19.5K" },
+    { percent: 16.3, color: "hsl(210,60%,55%)", label: "Phase 4", value: "$10.5K" },
+    { percent: 18.6, color: "hsl(170,45%,50%)", label: "Digital Platform", value: "$12K" },
+    { percent: 9.3,  color: "hsl(200,50%,60%)", label: "PM & Admin", value: "$6K" },
   ];
   const brainSegments = [
-    { percent: 4.7, color: "hsl(200,41%,30%)", label: "Phase 1", value: "$5K" },
-    { percent: 15.1, color: "hsl(200,42%,40%)", label: "Phase 2", value: "$16K" },
-    { percent: 14.2, color: "hsl(160,50%,45%)", label: "Phase 3", value: "$15K" },
-    { percent: 6.1, color: "hsl(210,60%,55%)", label: "Phase 4", value: "$6.5K" },
-    { percent: 3.8,  color: "hsl(200,50%,60%)", label: "PM & Admin", value: "$4K" },
-    { percent: 56.1, color: "hsl(38,92%,50%)", label: "Phase 5 (Brain)", value: "$59.5K" },
+    { percent: 3.1, color: "hsl(200,41%,30%)", label: "Phase 1", value: "$4.5K" },
+    { percent: 8.3, color: "hsl(200,42%,40%)", label: "Phase 2", value: "$12K" },
+    { percent: 13.5, color: "hsl(160,50%,45%)", label: "Phase 3", value: "$19.5K" },
+    { percent: 7.3, color: "hsl(210,60%,55%)", label: "Phase 4", value: "$10.5K" },
+    { percent: 8.3, color: "hsl(170,45%,50%)", label: "Digital Platform", value: "$12K" },
+    { percent: 4.2,  color: "hsl(200,50%,60%)", label: "PM & Admin", value: "$6K" },
+    { percent: 55.4, color: "hsl(38,92%,50%)", label: "melyn Brain", value: "$80K" },
   ];
   const segments = isBrain ? brainSegments : baseSegments;
   let offset = 0;
@@ -379,7 +411,7 @@ const BudgetSection = () => {
             Investment <span className="text-gradient">Breakdown</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Total: <span className="text-foreground font-display font-bold text-2xl text-gradient">{isBrain ? "$106,000" : "$46,500"}</span>
+            Total: <span className="text-foreground font-display font-bold text-2xl text-gradient">{isBrain ? "$144,500" : "$64,500"}</span>
           </p>
         </motion.div>
 
@@ -393,7 +425,7 @@ const BudgetSection = () => {
                 : "bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-foreground"
             }`}
           >
-            Strategy — $46,500
+            Strategy - $64,500
           </button>
           <div className="flex flex-col items-center gap-1">
             <button
@@ -404,7 +436,7 @@ const BudgetSection = () => {
                   : "bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-foreground"
               }`}
             >
-              Strategy Plus — $106,000
+              Strategy Plus - $144,500
             </button>
           </div>
         </motion.div>
@@ -495,22 +527,22 @@ const BudgetSection = () => {
           </div>
         </div>
 
-        {/* Collapsible step tables  -  4 phases */}
+        {/* Collapsible step tables - 4 phases */}
         <div className="space-y-6 mb-12">
-          <CollapsiblePhase title="Phase 1  -  Project Initiation and Alignment" dotColor="bg-primary" totalCost="$5,000">
-            <BudgetStepTable stepColor="text-primary" steps={phase1Steps} totalLabel="TOTAL  -  PHASE 1" totalCost="$5,000" />
+          <CollapsiblePhase title="Phase 1 - Project Initiation and Alignment" dotColor="bg-primary" totalCost="$4,500">
+            <BudgetStepTable stepColor="text-primary" steps={phase1Steps} totalLabel="TOTAL - PHASE 1" totalCost="$4,500" />
           </CollapsiblePhase>
-          <CollapsiblePhase title="Phase 2  -  Engagement and Baseline Assessment" dotColor="bg-[hsl(200,42%,40%)]" totalCost="$16,000">
-            <BudgetStepTable stepColor="text-[hsl(200,42%,40%)]" steps={phase2Steps} totalLabel="TOTAL  -  PHASE 2" totalCost="$16,000" />
+          <CollapsiblePhase title="Phase 2 - Engagement and Baseline Assessment" dotColor="bg-[hsl(200,42%,40%)]" totalCost="$12,000">
+            <BudgetStepTable stepColor="text-[hsl(200,42%,40%)]" steps={phase2Steps} totalLabel="TOTAL - PHASE 2" totalCost="$12,000" />
           </CollapsiblePhase>
-          <CollapsiblePhase title="Phase 3  -  Strategic Planning" dotColor="bg-[hsl(160,50%,45%)]" totalCost="$15,000">
-            <BudgetStepTable stepColor="text-[hsl(160,50%,45%)]" steps={phase3Steps} totalLabel="TOTAL  -  PHASE 3" totalCost="$15,000" />
+          <CollapsiblePhase title="Phase 3 - Strategic Planning" dotColor="bg-[hsl(160,50%,45%)]" totalCost="$19,500">
+            <BudgetStepTable stepColor="text-[hsl(160,50%,45%)]" steps={phase3Steps} totalLabel="TOTAL - PHASE 3" totalCost="$19,500" />
           </CollapsiblePhase>
-          <CollapsiblePhase title="Phase 4  -  Finalization and Close-Out" dotColor="bg-[hsl(210,60%,55%)]" totalCost="$6,500">
-            <BudgetStepTable stepColor="text-[hsl(210,60%,55%)]" steps={phase4Steps} totalLabel="TOTAL  -  PHASE 4" totalCost="$6,500" />
+          <CollapsiblePhase title="Phase 4 - Finalization and Close-Out" dotColor="bg-[hsl(210,60%,55%)]" totalCost="$10,500">
+            <BudgetStepTable stepColor="text-[hsl(210,60%,55%)]" steps={phase4Steps} totalLabel="TOTAL - PHASE 4" totalCost="$10,500" />
           </CollapsiblePhase>
           {isBrain && (
-            <CollapsiblePhase title="Phase 5  -  melyn Brain Implementation (Months 5–16)" dotColor="bg-amber-500" totalCost="$59,500">
+            <CollapsiblePhase title="Phase 5 - melyn Brain Implementation (Months 5-16)" dotColor="bg-amber-500" totalCost="$80,000">
               <div className="p-6">
                 <span className="inline-block text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold uppercase tracking-wider mb-4">Strategy Plus</span>
                 <div className="overflow-x-auto">
@@ -529,13 +561,13 @@ const BudgetSection = () => {
                         </tr>
                       ))}
                       <tr className="border-t-2 border-border bg-amber-50/50">
-                        <td className="py-2 px-3 font-display font-bold text-xs">TOTAL  -  Phase 5 (melyn Brain)</td>
-                        <td className="py-2 px-3 text-xs text-right font-bold text-amber-600">$59,500</td>
+                        <td className="py-2 px-3 font-display font-bold text-xs">TOTAL - Phase 5 (melyn Brain)</td>
+                        <td className="py-2 px-3 text-xs text-right font-bold text-amber-600">$80,000</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <p className="text-xs text-emerald-600 mt-4 font-medium">Can be funded through PIB and provincial grants</p>
+                <p className="text-xs text-emerald-600 mt-4 font-medium">May qualify for federal and provincial grant funding</p>
               </div>
             </CollapsiblePhase>
           )}
@@ -574,8 +606,8 @@ const BudgetSection = () => {
                     </tr>
                   ))}
                   <tr className="border-t-2 border-border bg-primary/5">
-                    <td className="py-2 px-4 font-display font-bold text-xs">TOTAL  -  melyn Brain</td>
-                    <td className="py-2 px-4 text-xs text-right font-bold text-primary">$59,500</td>
+                    <td className="py-2 px-4 font-display font-bold text-xs">TOTAL - melyn Brain</td>
+                    <td className="py-2 px-4 text-xs text-right font-bold text-primary">$80,000</td>
                   </tr>
                 </tbody>
               </table>
@@ -600,8 +632,8 @@ const BudgetSection = () => {
                   { role: "Strategic Oversight (Cherag Kapoor)", rate: "$350" },
                   { role: "Lead Analyst (Mackenzie Kreutzer)", rate: "$200" },
                   { role: "Indigenous Engagement Advisor (Ramona Horseman)", rate: "$175" },
-                  { role: "BC Cultural Advisor (Dr. Stan Chung)", rate: "$175" },
-                  { role: "Research Analyst", rate: "$100" },
+                  { role: "Governance Advisor (Dr. Stan Chung)", rate: "$175" },
+                  { role: "Market Research", rate: "$100" },
                   { role: "Project Coordinator", rate: "$75" },
                 ].map((r, i) => (
                   <tr key={i} className="border-b border-border/50 hover:bg-primary/5 transition-colors">

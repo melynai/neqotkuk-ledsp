@@ -7,7 +7,7 @@ const pillars = [
   {
     icon: Users,
     title: "Community First",
-    description: "Every decision starts with the community. We embed Indigenous engagement into every phase — not as a checkbox, but as the foundation.",
+    description: "Every decision starts with the community. We embed Indigenous engagement into every phase - not as a checkbox, but as the foundation.",
   },
   {
     icon: BarChart2,
@@ -17,7 +17,7 @@ const pillars = [
   {
     icon: Handshake,
     title: "Collaborative Co-Creation",
-    description: "Chief, Council, and community members are active co-authors of the strategy — not passive participants.",
+    description: "Chief, Council, and community members are active co-authors of the strategy - not passive participants.",
   },
   {
     icon: Rocket,
@@ -27,7 +27,7 @@ const pillars = [
   {
     icon: Monitor,
     title: "Digital-First Delivery",
-    description: "Your strategy lives online — updated, accessible, and shareable — not locked in a binder on a shelf.",
+    description: "Your strategy lives online - updated, accessible, and shareable - not locked in a binder on a shelf.",
   },
 ];
 
