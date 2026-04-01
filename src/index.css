@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 200 30% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 30% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 30% 14%;
+
+    /* melyn teal primary */
+    --primary: 200 41% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 14% 94%;
+    --secondary-foreground: 200 20% 30%;
+
+    --muted: 200 14% 96%;
+    --muted-foreground: 200 10% 46%;
+
+    --accent: 200 41% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 13% 88%;
+    --input: 200 13% 88%;
+    --ring: 200 41% 30%;
+
+    --radius: 0.75rem;
+
+    /* melyn brand tokens */
+    --teal:        200 41% 30%;   /* #2D586E */
+    --teal-light:  200 50% 94%;
+    --teal2:       200 42% 40%;   /* #3C7592 */
+    --teal2-light: 200 60% 95%;
+    --sky:         210 60% 55%;
+    --sky-light:   210 80% 95%;
+    --accent1:     214 62% 89%;   /* #DAE6F9 */
+    --accent1-light: 214 80% 96%;
+    --coral:       12 70% 60%;
+    --coral-light: 12 90% 95%;
+    --mint:        160 50% 45%;
+    --mint-light:  160 60% 94%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--teal)), hsl(var(--sky)));
+  }
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--teal2)), hsl(var(--mint)));
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--teal-light)), hsl(var(--accent1-light)), hsl(var(--sky-light)));
+  }
+  .bg-gradient-brain   { background: linear-gradient(135deg, hsl(var(--teal-light)), hsl(var(--sky-light))); }
+  .bg-gradient-website { background: linear-gradient(135deg, hsl(var(--accent1-light)), hsl(var(--teal2-light))); }
+  .bg-gradient-hr      { background: linear-gradient(135deg, hsl(var(--mint-light)), hsl(var(--teal-light))); }
+
+  .card-elevated {
+    @apply bg-card rounded-2xl shadow-lg border border-border/50;
+  }
+  .card-interactive {
+    @apply bg-card rounded-2xl shadow-md border border-border/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .budget-bar-brain   { background: linear-gradient(90deg, hsl(var(--teal)), hsl(var(--sky))); }
+  .budget-bar-website { background: linear-gradient(90deg, hsl(var(--teal2)), hsl(var(--accent1))); }
+  .budget-bar-hr      { background: linear-gradient(90deg, hsl(var(--mint)), hsl(var(--teal))); }
+  .budget-bar-phase4  { background: linear-gradient(90deg, hsl(var(--sky)), hsl(var(--mint))); }
+  .budget-bar-pm      { background: linear-gradient(90deg, hsl(var(--teal2)), hsl(var(--sky))); }
+
+  .bg-gradient-phase4 { background: linear-gradient(135deg, hsl(var(--mint-light)), hsl(var(--sky-light))); }
+
+  .timeline-line { background: linear-gradient(180deg, hsl(var(--teal)), hsl(var(--sky)), hsl(var(--mint))); }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+  }
+
+  .shadow-glow { box-shadow: 0 8px 30px -8px hsl(var(--teal) / 0.25); }
+  .bg-glow     { background: radial-gradient(ellipse at center, hsl(var(--teal) / 0.06) 0%, transparent 70%); }
+
+  .glass      { @apply bg-card/80 backdrop-blur-md border border-border/50; }
+  .glass-card { @apply bg-card rounded-2xl shadow-sm border border-border/50; }
+}
