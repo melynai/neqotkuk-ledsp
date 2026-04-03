@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Lock } from "lucide-react";
+import melynLogo from "@/assets/melyn-logo.png";
 
-const PASS_HASH = "melynTobique2026!";
+const PASS_HASH = "melynNeqotkuk2026!";
 
 interface PasswordGateProps {
   children: React.ReactNode;
