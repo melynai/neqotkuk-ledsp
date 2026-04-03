@@ -488,7 +488,7 @@ export default function ScopeBrain() {
 
           <div className="card-elevated inline-block px-8 py-4 rounded-2xl mb-10">
             <div className="text-sm text-muted-foreground mb-1">Investment</div>
-            <div className="text-4xl font-display font-bold text-gradient">$59,500</div>
+            <div className="text-4xl font-display font-bold text-gradient"><div className="text-4xl font-display font-bold text-gradient">$80,000</div></div>
           </div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
