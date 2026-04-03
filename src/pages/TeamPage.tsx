@@ -61,6 +61,14 @@ const projectTeam = [
     bio: "B.Sc. Product Design (Istanbul Technical University), 7+ years in multidisciplinary project coordination. Manages deliverable tracking, stakeholder communications, and day-to-day coordination across all four phases.",
     tags: ["Project Coordination", "Deliverable Tracking", "Stakeholder Comms"],
   },
+  {
+    name: "Vansh Kapoor",
+    title: "Analyst",
+    badge: "Analyst",
+    badgeColor: "bg-[hsl(var(--sky)/0.1)] text-[hsl(var(--sky))] border-[hsl(var(--sky)/0.2)]",
+    bio: "B.Sc. Biology and Life Sciences (Coppin State University). Former Division I athlete. Brings analytical rigour and elite-level discipline to data analysis and research tasks.",
+    tags: ["Analysis", "Research", "Data"],
+  },
 ];
 
 const melyTeamGroups = [
