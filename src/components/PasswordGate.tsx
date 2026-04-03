@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Lock } from "lucide-react";
+import melynLogo from "@/assets/melyn-logo.png";
 
-const PASS_HASH = "melynTobique2026!";
+const PASS_HASH = "melynNeqotkuk2026!";
 
 interface PasswordGateProps {
   children: React.ReactNode;
@@ -30,9 +31,7 @@ const PasswordGate = ({ children }: PasswordGateProps) => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-6">
       <form onSubmit={handleSubmit} className="card-elevated rounded-2xl p-8 w-full max-w-sm text-center space-y-6">
-        <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-          <Lock className="w-6 h-6 text-primary" />
-        </div>
+        <img src={melynLogo} alt="melyn" className="h-10 mx-auto" />
         <div>
           <h1 className="font-display text-xl font-bold mb-1">Confidential Proposal</h1>
           <p className="text-sm text-muted-foreground">Enter the password to continue</p>
